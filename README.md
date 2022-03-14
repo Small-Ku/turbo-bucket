@@ -22,3 +22,4 @@ scoop install turbo/<app_name>
 
 | Manifest | Description |
 |----------|-------------|
+| [packwiz](https://github.com/packwiz/packwiz) | A command line tool for editing and distributing Minecraft modpacks. |
