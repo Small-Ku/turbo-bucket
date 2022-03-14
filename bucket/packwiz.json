@@ -1,0 +1,36 @@
+{
+    "version": "0.0.95+3fb350f.1947217098",
+    "description": "A command line tool for editing and distributing Minecraft modpacks, using a git-friendly TOML format. Supports CurseForge and Modrinth mods with automated updates!",
+    "homepage": "https://github.com/comp500/packwiz/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/comp500/packwiz/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/1947217098/Windows%2064-bit",
+            "hash": "6487687303c27af3d8359549a0ab93c31a59fa7f859b534486de3f594d723700"
+        },
+        "32bit": {
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/1947217098/Windows%2032-bit",
+            "hash": "d07a3cacd6208368ae1901b78bf29fe57293dd3ab5bf0130f85a7933c217487a"
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/packwiz/packwiz/actions/workflows/go.yml/runs",
+        "jsonpath": "$.workflow_runs",
+        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_]+,\\s+){2}\"conclusion\": ?\"success\"",
+        "replace": "0.0.${run}+${commit}.${id}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2064-bit"
+            },
+            "32bit": {
+                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2032-bit"
+            }
+        }
+    },
+    "bin": "packwiz.exe"
+}
