@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/1947217098/Windows%2064-bit",
-            "hash": "6487687303c27af3d8359549a0ab93c31a59fa7f859b534486de3f594d723700"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/1947217098/Windows%2064-bit.zip",
+            "hash": "cbf59f7d8248a7ee665625fb793f3df0116f44f186ef6ddb822c13faad175b7c"
         },
         "32bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/1947217098/Windows%2032-bit",
-            "hash": "d07a3cacd6208368ae1901b78bf29fe57293dd3ab5bf0130f85a7933c217487a"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/1947217098/Windows%2032-bit.zip",
+            "hash": "0ef2047bc6bc2fdfb85e15fc8900fac9ee2c9f787a7cccce2aeecd5d4cfda7c8"
         }
     },
     "checkver": {
@@ -25,10 +25,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2064-bit"
+                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2064-bit.zip"
             },
             "32bit": {
-                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2032-bit"
+                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2032-bit.zip"
             }
         }
     },
