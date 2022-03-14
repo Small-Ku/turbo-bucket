@@ -12,5 +12,5 @@ jobs:
         uses: shovel-org/GithubActions@main
         if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))
         env:
-          GITH_EMAIL: youremail@email.com
+          GITH_EMAIL: small_ku@outlook.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
