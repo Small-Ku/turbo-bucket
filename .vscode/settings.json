@@ -31,4 +31,15 @@
             ".github/workflows/*.y*ml",
         ],
     },
+    "conventionalCommits.scopes": [
+        "packwiz",
+        "gpu-z-portable"
+    ],
+    "cSpell.words": [
+        "autoupdate",
+        "checkver",
+        "jsonpath",
+        "packwiz",
+        "PLUGINSDIR"
+    ],
 }

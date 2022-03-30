@@ -1,0 +1,28 @@
+{
+    "homepage": "https://portableapps.com/apps/utilities/gpu-z-portable",
+    "description": "Graphics profiler",
+    "version": "2.45.0",
+    "license": "",
+    "url": "https://download3.portableapps.com/portableapps/GPU-ZPortable/GPU-ZPortable_2.45.0.paf.exe?20190321#/dl.7z",
+    "hash": "e0d08e31d320e9c9db51478c805eb51d95ed448ebcb94b396bd6a77252f5a9d8",
+    "bin": "GPU-ZPortable.exe",
+    "shortcuts": [
+        [
+            "GPU-ZPortable.exe",
+            "GPU-Z Portable"
+        ]
+    ],
+    "persist": "Data",
+    "checkver": {
+        "url": "https://portableapps.com/apps/utilities/gpu-z-portable",
+        "regex": "Version\\s+([\\d\\.]*) for Win"
+    },
+    "autoupdate": {
+        "url": "https://download3.portableapps.com/portableapps/GPU-ZPortable/GPU-ZPortable_$version.paf.exe?20190321#/dl.7z",
+        "hash": {
+            "url": "https://portableapps.com/apps/utilities/gpu-z-portable",
+            "regex": "MD5 Hash:\\s+([\\w\\d]{32})"
+        }
+    },
+    "post_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+}
