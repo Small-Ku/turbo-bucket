@@ -1,0 +1,27 @@
+{
+    "version": "0.0.283+2d2cf65.2008968370",
+    "description": "Fast and multi-platform Spotify client with native GUI",
+    "homepage": "https://github.com/jpochyla/psst",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/jpochyla/psst/blob/master/LICENSE.md"
+    },
+    "url": "https://nightly.link/jpochyla/psst/actions/runs/2008968370/Psst.exe.zip",
+    "hash": "56efd3f23847766f221494a5ff3170350863eb679e1e578bce5e28975197a016",
+    "checkver": {
+        "url": "https://api.github.com/repos/jpochyla/psst/actions/workflows/build.yml/runs",
+        "jsonpath": "$.workflow_runs",
+        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d-_]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_-]+,\\s+){2}\"conclusion\": ?\"success\"",
+        "replace": "0.0.${run}+${commit}.${id}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/jpochyla/psst/actions/runs/$matchId/Psst.exe.zip"
+    },
+    "bin": "psst-gui.exe",
+    "shortcuts": [
+        [
+            "psst-gui.exe",
+            "Psst"
+        ]
+    ]
+}
