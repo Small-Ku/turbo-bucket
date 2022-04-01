@@ -19,7 +19,7 @@
     "checkver": {
         "url": "https://api.github.com/repos/packwiz/packwiz/actions/workflows/go.yml/runs",
         "jsonpath": "$.workflow_runs",
-        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_]+,\\s+){2}\"conclusion\": ?\"success\"",
+        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_-]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_-]+,\\s+){2}\"conclusion\": ?\"success\"",
         "replace": "0.0.${run}+${commit}.${id}"
     },
     "autoupdate": {
