@@ -24,3 +24,9 @@ scoop install turbo/<app_name>
 |----------|-------------|
 | [gpu-z-portable](https://portableapps.com/apps/utilities/gpu-z-portable) | [GPU-Z](https://www.techpowerup.com/gpuz/) that available on PortableApps.com. |
 | [packwiz](https://github.com/packwiz/packwiz) | A command line tool for editing and distributing Minecraft modpacks. |
+
+#### Early Apps
+
+| Manifest | Description |
+|----------|-------------|
+| [psst](https://github.com/jpochyla/psst) | Fast and multi-platform Spotify client with native GUI |
