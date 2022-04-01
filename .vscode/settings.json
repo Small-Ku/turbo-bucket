@@ -33,7 +33,8 @@
     },
     "conventionalCommits.scopes": [
         "packwiz",
-        "gpu-z-portable"
+        "gpu-z-portable",
+        "psst"
     ],
     "cSpell.words": [
         "autoupdate",
