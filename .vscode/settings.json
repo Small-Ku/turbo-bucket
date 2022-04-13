@@ -36,7 +36,8 @@
         "gpu-z-portable",
         "psst",
         "pso2-tweaker",
-        "qbittorrent-enhanced"
+        "qbittorrent-enhanced",
+        "reshade-addon"
     ],
     "cSpell.words": [
         "autoupdate",
@@ -47,6 +48,7 @@
         "PHANTASYSTARONLINE",
         "PLUGINSDIR",
         "qbittorrent",
+        "reshade",
         "Tweaker"
     ],
 }
