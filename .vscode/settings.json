@@ -35,13 +35,18 @@
         "packwiz",
         "gpu-z-portable",
         "psst",
-        "pso2-tweaker"
+        "pso2-tweaker",
+        "qbittorrent-enhanced"
     ],
     "cSpell.words": [
         "autoupdate",
         "checkver",
+        "EPICGAMES",
         "jsonpath",
         "packwiz",
-        "PLUGINSDIR"
+        "PHANTASYSTARONLINE",
+        "PLUGINSDIR",
+        "qbittorrent",
+        "Tweaker"
     ],
 }
