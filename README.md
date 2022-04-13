@@ -26,6 +26,7 @@ scoop install turbo/<app_name>
 | [packwiz](https://github.com/packwiz/packwiz) | A command line tool for editing and distributing Minecraft modpacks. |
 | [pso2-tweaker](https://arks-layer.com/) | A replacement for the normal PSO2 launcher, used to update, patch, and launch the Japanese and Global versions of the game. |
 | [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) | qBittorrent BitTorrent client with anti-leech enhancement. Manifest from [dorado](https://github.com/chawyehsu/dorado) |
+| [reshade-addon](https://reshade.me) | ReShade with full add-on support, not whitelisted by anti-cheat providers. Use at your own risk. Manifest forked from [extra](https://github.com/ScoopInstaller/Extras) |
 
 #### Early Apps
 
