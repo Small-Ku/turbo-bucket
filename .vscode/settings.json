@@ -34,7 +34,8 @@
     "conventionalCommits.scopes": [
         "packwiz",
         "gpu-z-portable",
-        "psst"
+        "psst",
+        "pso2-tweaker"
     ],
     "cSpell.words": [
         "autoupdate",
