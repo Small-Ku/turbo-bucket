@@ -14,6 +14,10 @@
         "32bit": {
             "url": "https://nightly.link/packwiz/packwiz/actions/runs/2145418095/Windows%2032-bit.zip",
             "hash": "37d90ec159427dd00603ef7b1d9a478b3880ce71c1905ed37caba6bb0d026535"
+        },
+        "arm64": {
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2145418095/Windows%2064-bit%20ARM.zip",
+            "hash": "030df70db23bb13a5e2fe284d0826d64d9872f43c57bfc74308a9085a6e34fe6"
         }
     },
     "checkver": {
@@ -29,6 +33,9 @@
             },
             "32bit": {
                 "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2032-bit.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2064-bit%20ARM.zip"
             }
         }
     },
