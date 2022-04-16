@@ -37,12 +37,14 @@
         "psst",
         "pso2-tweaker",
         "qbittorrent-enhanced",
-        "reshade-addon"
+        "reshade-addon",
+        "gotmpl"
     ],
     "cSpell.words": [
         "autoupdate",
         "checkver",
         "EPICGAMES",
+        "gotmpl",
         "jsonpath",
         "packwiz",
         "PHANTASYSTARONLINE",
