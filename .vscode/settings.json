@@ -38,11 +38,13 @@
         "pso2-tweaker",
         "qbittorrent-enhanced",
         "reshade-addon",
-        "gotmpl"
+        "gotmpl",
+        "coqui-stt"
     ],
     "cSpell.words": [
         "autoupdate",
         "checkver",
+        "coqui",
         "EPICGAMES",
         "gotmpl",
         "jsonpath",
