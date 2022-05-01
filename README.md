@@ -22,6 +22,7 @@ scoop install turbo/<app_name>
 
 | Manifest | Description |
 |----------|-------------|
+| [coqui-stt](https://github.com/coqui-ai/STT) | An open-source deep-learning toolkit for training and deploying speech-to-text models. |
 | [gotmpl](https://github.com/NateScarlet/gotmpl/) | Render golang template with command line. Build with [my own repo](https://github.com/Small-Ku/gotmpl/actions). |
 | [gpu-z-portable](https://portableapps.com/apps/utilities/gpu-z-portable) | [GPU-Z](https://www.techpowerup.com/gpuz/) that available on PortableApps.com. |
 | [packwiz](https://github.com/packwiz/packwiz) | A command line tool for editing and distributing Minecraft modpacks. |
