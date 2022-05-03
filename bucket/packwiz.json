@@ -1,5 +1,5 @@
 {
-    "version": "0.0.104+efb434d.2251049855",
+    "version": "0.0.105+d7bfed5.2266104285",
     "description": "A command line tool for editing and distributing Minecraft modpacks, using a git-friendly TOML format. Supports CurseForge and Modrinth mods with automated updates!",
     "homepage": "https://github.com/comp500/packwiz/",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2251049855/Windows%2064-bit.zip",
-            "hash": "ad734afcec36e67f9034785170c7ce3d8a72b3511e1dd86089a618598f2f9dd8"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2266104285/Windows%2064-bit.zip",
+            "hash": "5d8af97c091b0cef9ac6d866228e0bd8b0eb437f1bb9be42ec85f36a22159529"
         },
         "32bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2251049855/Windows%2032-bit.zip",
-            "hash": "9fc9748bd9b6d5c9dab4c228ab993a540ad99a4fdf046d7c9b6bd3a39a13a50d"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2266104285/Windows%2032-bit.zip",
+            "hash": "9ae81e2ecf6de400f12ff2ce32375349404dddf073b4d8e14b66e28b324496a2"
         },
         "arm64": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2251049855/Windows%2064-bit%20ARM.zip",
-            "hash": "d348f9be86d28f66f27ddf1660c0dbea16189266e957b90dabd5979f4c909738"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2266104285/Windows%2064-bit%20ARM.zip",
+            "hash": "6a47e8592365196448bba5e73a534617e4bd7a7c0d922a54f566a6d6b2958038"
         }
     },
     "checkver": {
