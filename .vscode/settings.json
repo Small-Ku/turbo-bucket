@@ -39,7 +39,8 @@
         "qbittorrent-enhanced",
         "reshade-addon",
         "gotmpl",
-        "coqui-stt"
+        "coqui-stt",
+        "kondo"
     ],
     "cSpell.words": [
         "autoupdate",
@@ -53,6 +54,7 @@
         "PLUGINSDIR",
         "qbittorrent",
         "reshade",
-        "Tweaker"
+        "Tweaker",
+        "kondo"
     ],
 }
