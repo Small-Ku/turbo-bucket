@@ -25,6 +25,7 @@ scoop install turbo/<app_name>
 | [coqui-stt](https://github.com/coqui-ai/STT) | An open-source deep-learning toolkit for training and deploying speech-to-text models. |
 | [gotmpl](https://github.com/NateScarlet/gotmpl/) | Render golang template with command line. Build with [my own repo](https://github.com/Small-Ku/gotmpl/actions). |
 | [gpu-z-portable](https://portableapps.com/apps/utilities/gpu-z-portable) | [GPU-Z](https://www.techpowerup.com/gpuz/) that available on PortableApps.com. |
+| [kondo](https://github.com/tbillington/kondo) | Save disk space by cleaning non-essential files from software projects. |
 | [packwiz](https://github.com/packwiz/packwiz) | A command line tool for editing and distributing Minecraft modpacks. |
 | [pso2-tweaker](https://arks-layer.com/) | A replacement for the normal PSO2 launcher, used to update, patch, and launch the Japanese and Global versions of the game. |
 | [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) | qBittorrent BitTorrent client with anti-leech enhancement. Manifest from [dorado](https://github.com/chawyehsu/dorado) |
