@@ -40,7 +40,8 @@
         "reshade-addon",
         "gotmpl",
         "coqui-stt",
-        "kondo"
+        "kondo",
+        "nmkoder"
     ],
     "cSpell.words": [
         "autoupdate",
