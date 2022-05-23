@@ -16,6 +16,9 @@
             "Nmkoder"
         ]
     ],
+    "persist": [
+        "data"
+    ],
     "checkver": "github",
     "autoupdate": {
         "extract_dir": "Nmkoder$majorVersion.$minorVersion",
