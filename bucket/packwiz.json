@@ -1,5 +1,5 @@
 {
-    "version": "0.0.105+d7bfed5.2266104285",
+    "version": "0.0.112+e71b63e.2368290489",
     "description": "A command line tool for editing and distributing Minecraft modpacks, using a git-friendly TOML format. Supports CurseForge and Modrinth mods with automated updates!",
     "homepage": "https://github.com/comp500/packwiz/",
     "license": {
@@ -8,31 +8,24 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2266104285/Windows%2064-bit.zip",
-            "hash": "5d8af97c091b0cef9ac6d866228e0bd8b0eb437f1bb9be42ec85f36a22159529"
-        },
-        "32bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2266104285/Windows%2032-bit.zip",
-            "hash": "9ae81e2ecf6de400f12ff2ce32375349404dddf073b4d8e14b66e28b324496a2"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2368290489/Windows%2064-bit.zip",
+            "hash": "616a7cdb79faed6f139aa9fcefec71e3ce5f02ef28fdc3a91b205ef54d914780"
         },
         "arm64": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2266104285/Windows%2064-bit%20ARM.zip",
-            "hash": "6a47e8592365196448bba5e73a534617e4bd7a7c0d922a54f566a6d6b2958038"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2368290489/Windows%2064-bit%20ARM.zip",
+            "hash": "dd11fb64227f76b849a0b273f83154755935984be97b62ef4489a1268c115862"
         }
     },
     "checkver": {
         "url": "https://api.github.com/repos/packwiz/packwiz/actions/workflows/go.yml/runs",
         "jsonpath": "$.workflow_runs",
-        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_-]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_-]+,\\s+){2}\"conclusion\": ?\"success\"",
+        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+){1}\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+){2}\"conclusion\": ?\"success\"",
         "replace": "0.0.${run}+${commit}.${id}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2064-bit.zip"
-            },
-            "32bit": {
-                "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2032-bit.zip"
             },
             "arm64": {
                 "url": "https://nightly.link/packwiz/packwiz/actions/runs/$matchId/Windows%2064-bit%20ARM.zip"
