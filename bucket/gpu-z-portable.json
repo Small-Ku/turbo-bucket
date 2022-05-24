@@ -1,10 +1,10 @@
 {
     "homepage": "https://portableapps.com/apps/utilities/gpu-z-portable",
     "description": "Graphics profiler",
-    "version": "2.45.0",
+    "version": "2.46.0",
     "license": "",
-    "url": "https://download3.portableapps.com/portableapps/GPU-ZPortable/GPU-ZPortable_2.45.0.paf.exe?20190321#/dl.7z",
-    "hash": "e0d08e31d320e9c9db51478c805eb51d95ed448ebcb94b396bd6a77252f5a9d8",
+    "url": "https://portableapps.com/redirect/?a=GPU-ZPortable&s=s&d=pa&f=GPU-ZPortable_2.46.0.paf.exe#/dl.7z",
+    "hash": "a954893d7c2c0cc096f88564505153d96f147664091a8ad93d4f3aadd12e6483",
     "bin": "GPU-ZPortable.exe",
     "shortcuts": [
         [
@@ -18,10 +18,10 @@
         "regex": "Version\\s+([\\d\\.]*) for Win"
     },
     "autoupdate": {
-        "url": "https://download3.portableapps.com/portableapps/GPU-ZPortable/GPU-ZPortable_$version.paf.exe?20190321#/dl.7z",
+        "url": "https://portableapps.com/redirect/?a=GPU-ZPortable&s=s&d=pa&f=GPU-ZPortable_$version.paf.exe#/dl.7z",
         "hash": {
             "url": "https://portableapps.com/apps/utilities/gpu-z-portable",
-            "regex": "MD5 Hash:\\s+([\\w\\d]{32})"
+            "regex": "<strong>SHA256 Hash<\\/strong>:\\s*([\\w\\d]{64})"
         }
     },
     "post_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
