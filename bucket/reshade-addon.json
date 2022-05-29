@@ -5,7 +5,7 @@
     "license": "BSD-3-Clause",
     "url": "https://reshade.me/downloads/ReShade_Setup_5.2.1_Addon.exe#/ReShade_Addon.exe",
     "hash": "8f51834863aed857f9ea066b3424ccc9fd919565721a60f8d383c464dcfdedae",
-    "bin": "ReShade.exe",
+    "bin": "ReShade_Addon.exe",
     "shortcuts": [
         [
             "ReShade_Addon.exe",
