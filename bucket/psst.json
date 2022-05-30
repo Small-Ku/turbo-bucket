@@ -1,17 +1,17 @@
 {
-    "version": "0.0.291+1230bb9.2349909010",
+    "version": "0.0.294+9e36291.2409799491",
     "description": "Fast and multi-platform Spotify client with native GUI",
     "homepage": "https://github.com/jpochyla/psst",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/jpochyla/psst/blob/master/LICENSE.md"
     },
-    "url": "https://nightly.link/jpochyla/psst/actions/runs/2349909010/Psst.exe.zip",
-    "hash": "c5a0438319d3247342e2fff957fbf34cfc3a8c77ae855eeed0cc7f94bbb8ba66",
+    "url": "https://nightly.link/jpochyla/psst/actions/runs/2409799491/Psst.exe.zip",
+    "hash": "df8d3ef939bbe45a0327a8c949c7b7fbfa481b0fe678aab873e18a2d2937a8ec",
     "checkver": {
         "url": "https://api.github.com/repos/jpochyla/psst/actions/workflows/build.yml/runs",
         "jsonpath": "$.workflow_runs",
-        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\\/\\.-]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\\/\\.-]+,\\s+){1}\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\\/\\.-]+,\\s+){2}\"conclusion\": ?\"success\"",
+        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+){2}\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+){1}\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+){2}\"conclusion\": ?\"success\"",
         "replace": "0.0.${run}+${commit}.${id}"
     },
     "autoupdate": {
