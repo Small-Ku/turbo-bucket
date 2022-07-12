@@ -1,10 +1,10 @@
 {
     "homepage": "https://portableapps.com/apps/utilities/gpu-z-portable",
     "description": "Graphics profiler",
-    "version": "2.46.0",
+    "version": "2.47.0",
     "license": "",
-    "url": "https://portableapps.com/redirect/?a=GPU-ZPortable&s=s&d=pa&f=GPU-ZPortable_2.46.0.paf.exe#/dl.7z",
-    "hash": "a954893d7c2c0cc096f88564505153d96f147664091a8ad93d4f3aadd12e6483",
+    "url": "https://portableapps.com/redirect/?a=GPU-ZPortable&s=s&d=pa&f=GPU-ZPortable_2.47.0.paf.exe#/dl.7z",
+    "hash": "94d62633c3f71d1ae851686a3307a3ae668eb903815eaec369c793d062f84938",
     "bin": "GPU-ZPortable.exe",
     "shortcuts": [
         [
