@@ -10,8 +10,7 @@
         }
     },
     "bin": [
-        "lapce.exe",
-        "lapce-nightly"
+        ["lapce.exe", "lapce-nightly"]
     ],
     "shortcuts": [
         [
