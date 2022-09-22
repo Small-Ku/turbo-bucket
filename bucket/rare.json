@@ -1,0 +1,28 @@
+{
+    "version": "1.9.0",
+    "description": "A frontend for legendary, the open source Epic Games Launcher alternative.",
+    "homepage": "https://github.com/Dummerle/Rare",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Dummerle/Rare/releases/download/1.9.0/Rare-Windows-1.9.0.msi",
+            "hash": "9df006b7a922dc52afb5ce4cf9a93d6360266c8ddaf6a18805c0060de2c6c5a2"
+        }
+    },
+    "bin": "Rare.exe",
+    "shortcuts": [
+        [
+            "Rare.exe",
+            "Rare"
+        ]
+    ],
+    "notes": "Rare is NOT portable.",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Dummerle/Rare/releases/download/$version/Rare-Windows-$version.msi"
+            }
+        }
+    }
+}
