@@ -5,8 +5,8 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Dummerle/Rare/releases/download/1.9.1/Rare-Windows-1.9.1.msi",
-            "hash": "9ba0727cd5320fdb8e44e55b3cf1e03a9a8dff3a13f9e5a4b8ec50db39398c4b"
+            "url": "https://github.com/Dummerle/Rare/releases/download/1.9.1/Rare-Windows-1.91.msi",
+            "hash": "d88a986a0ba0f68afd8d16aedccfbc5773678be316ffdea9cc99abbc874bb409"
         }
     },
     "bin": "Rare.exe",
