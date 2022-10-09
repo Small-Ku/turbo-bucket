@@ -1,13 +1,13 @@
 {
-    "version": "0.0.348+dedd9f6.3211333126",
+    "version": "0.0.353+0c2350f.3215312800",
     "description": "Fast and multi-platform Spotify client with native GUI",
     "homepage": "https://github.com/jpochyla/psst",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/jpochyla/psst/blob/master/LICENSE.md"
     },
-    "url": "https://nightly.link/jpochyla/psst/actions/runs/3211333126/Psst.exe.zip",
-    "hash": "1376cbad3af865fd4459225f2fe1e4ab34fc3bb245d0ef7615d284ca9462147d",
+    "url": "https://nightly.link/jpochyla/psst/actions/runs/3215312800/Psst.exe.zip",
+    "hash": "f72963953cda16db8ce3451006cb31ca4f509033d44ecf2fe1f85f21aa5aa604",
     "checkver": {
         "url": "https://api.github.com/repos/jpochyla/psst/actions/workflows/build.yml/runs",
         "jsonpath": "$.workflow_runs",
