@@ -1,12 +1,12 @@
 {
-    "version": "1d93d28",
+    "version": "bd17c63",
     "description": "Lightning-fast and Powerful Code Editor written in Rust (nightly builds)",
     "homepage": "http://lapce.dev/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/lapce/lapce/releases/download/nightly/Lapce-windows-portable.zip",
-            "hash": "45b59f8ddbd1c8a597614c4c59d070e7a0fc94adef519da88e5f718cba052b6b"
+            "hash": "dde3d8f6487bbd6e1d9348dcb604fa658e6a8c81f920da17a1d9f85d7e4af0d3"
         }
     },
     "bin": [
