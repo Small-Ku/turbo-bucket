@@ -23,16 +23,22 @@ scoop install turbo/<app_name>
 | Manifest | Description |
 |----------|-------------|
 | [coqui-stt](https://github.com/coqui-ai/STT) | An open-source deep-learning toolkit for training and deploying speech-to-text models. |
+| [dmm-fast-launcher](https://github.com/fa0311/DMMGamePlayerFastLauncher) | DMM Game Player Fast Launcher for secure and fast start-up. |
 | [gotmpl](https://github.com/NateScarlet/gotmpl/) | Render golang template with command line. Build with [my own repo](https://github.com/Small-Ku/gotmpl/actions). |
 | [gpu-z-portable](https://portableapps.com/apps/utilities/gpu-z-portable) | [GPU-Z](https://www.techpowerup.com/gpuz/) that available on PortableApps.com. |
 | [kondo](https://github.com/tbillington/kondo) | Save disk space by cleaning non-essential files from software projects. |
+| [nmkoder](https://github.com/n00mkrad/nmkoder) | Media encoding, muxing, analysis toolkit for Windows |
 | [packwiz](https://github.com/packwiz/packwiz) | A command line tool for editing and distributing Minecraft modpacks. |
 | [pso2-tweaker](https://arks-layer.com/) | A replacement for the normal PSO2 launcher, used to update, patch, and launch the Japanese and Global versions of the game. |
 | [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) | qBittorrent BitTorrent client with anti-leech enhancement. Manifest from [dorado](https://github.com/chawyehsu/dorado) |
-| [reshade-addon](https://reshade.me) | ReShade with full add-on support, not whitelisted by anti-cheat providers. Use at your own risk. Manifest forked from [extra](https://github.com/ScoopInstaller/Extras) |
+| [rare](https://github.com/Dummerle/Rare) | A frontend for legendary, the open source Epic Games Launcher alternative. |
+| [reshade-addon](https://reshade.me) | ReShade with full add-on support, not whitelisted by anti-cheat providers. Use at your own risk. Manifests end with "-dll" install the dll instead of the installer. Manifest forked from [extra](https://github.com/ScoopInstaller/Extras) |
 
 #### Early Apps
 
 | Manifest | Description |
 |----------|-------------|
+| [lapce-nightly](https://github.com/jpochyla/psst) | Lightning-fast and Powerful Code Editor written in Rust (nightly builds) |
+| [opencc](https://opencc.byvoid.com/) | Open Chinese Convert Command Line Tool. (latest prebuilt) |
 | [psst](https://github.com/jpochyla/psst) | Fast and multi-platform Spotify client with native GUI. |
+| [wxdfast](https://github.com/archdvx/wxdfast/) | Multithread download manager written in C++ using wxWidgets and Aria2. |
