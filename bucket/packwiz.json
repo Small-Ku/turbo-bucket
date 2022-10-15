@@ -1,5 +1,5 @@
 {
-    "version": "0.0.127+1167142.2923836237",
+    "version": "0.0.130+f00dc98.3223210621",
     "description": "A command line tool for editing and distributing Minecraft modpacks, using a git-friendly TOML format. Supports CurseForge and Modrinth mods with automated updates!",
     "homepage": "https://github.com/comp500/packwiz/",
     "license": {
@@ -8,18 +8,18 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2923836237/Windows%2064-bit.zip",
-            "hash": "18b20ffc29c123906d72b4d69d951fe1021d384c89fbc8d0d454f0a0fdd03dd8"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/3223210621/Windows%2064-bit.zip",
+            "hash": "ae815970309ea5156dd319c6fbcffd58a3496d9148364b90c7a1ae520145da42"
         },
         "arm64": {
-            "url": "https://nightly.link/packwiz/packwiz/actions/runs/2923836237/Windows%2064-bit%20ARM.zip",
-            "hash": "fd948623c4d380a95d420969ff0fcd2414b225fa94f80f04f7aa3170da811f31"
+            "url": "https://nightly.link/packwiz/packwiz/actions/runs/3223210621/Windows%2064-bit%20ARM.zip",
+            "hash": "14e8da93822ec2e8b9d2bede71873f9698d4afa19a3472a7900b3554ff11b68d"
         }
     },
     "checkver": {
         "url": "https://api.github.com/repos/packwiz/packwiz/actions/workflows/go.yml/runs",
         "jsonpath": "$.workflow_runs",
-        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\\/\\.-]+,\\s+)*\"head_branch\": ?\"master\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\\/\\.\\-\\s]+,\\s+)*\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\\/\\.\\-\\s]+,\\s+)*\"conclusion\": ?\"success\"",
+        "regex": "\"id\": ?(?<id>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.-]+,\\s+)*\"head_branch\": ?\"main\",\\s+\"head_sha\": ?\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.\\-\\s]+,\\s+)*\"run_number\": ?(?<run>\\d+),\\s+(\"[\\w_]+\": ?[\"\\w\\d_\\/\\.\\-\\s]+,\\s+)*\"conclusion\": ?\"success\"",
         "replace": "0.0.${run}+${commit}.${id}"
     },
     "autoupdate": {
