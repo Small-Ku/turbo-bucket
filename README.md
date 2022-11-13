@@ -33,6 +33,7 @@ scoop install turbo/<app_name>
 | [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) | qBittorrent BitTorrent client with anti-leech enhancement. Manifest from [dorado](https://github.com/chawyehsu/dorado) |
 | [rare](https://github.com/Dummerle/Rare) | A frontend for legendary, the open source Epic Games Launcher alternative. |
 | [reshade-addon](https://reshade.me) | ReShade with full add-on support, not whitelisted by anti-cheat providers. Use at your own risk. Manifests end with "-dll" install the dll instead of the installer. Manifest forked from [extra](https://github.com/ScoopInstaller/Extras) |
+| [vencord-installer](https://github.com/Vendicated/VencordInstaller) | A cross platform gui app for installing [Vencord](https://github.com/Vendicated/Vencord). |
 
 #### Early Apps
 
