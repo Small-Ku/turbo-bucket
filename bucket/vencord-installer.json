@@ -1,5 +1,5 @@
 {
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "A cross platform gui app for installing Vencord.",
     "homepage": "https://github.com/Vendicated/VencordInstaller",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Vendicated/VencordInstaller/releases/download/v1.2.1/VencordInstaller.exe",
-            "hash": "b033e9ef496350775e742e7ba6531b7b80f6f58fe5a8643af049d6e981704bf6"
+            "url": "https://github.com/Vendicated/VencordInstaller/releases/download/v1.2.2/VencordInstaller.exe",
+            "hash": "b3391e5767669d19047b43d6a0bc3e1d273f37d1d4d9aab382742091bf649187"
         }
     },
     "checkver": "github",
