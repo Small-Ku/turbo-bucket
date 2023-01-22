@@ -1,5 +1,5 @@
 {
-    "version": "4.4.0",
+    "version": "4.5.2",
     "description": "DMM Game Player Fast Launcher for secure and fast start-up.",
     "homepage": "https://github.com/fa0311/DMMGamePlayerFastLauncher",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/fa0311/DMMGamePlayerFastLauncher/releases/download/v4.4.0/DMMGamePlayerFastLauncher.exe",
-            "hash": "b5fdc844d35fbc80faf583545c3463be8de6eef0f08752ab05d1c2140305efbb"
+            "url": "https://github.com/fa0311/DMMGamePlayerFastLauncher/releases/download/v4.5.2/DMMGamePlayerFastLauncher.exe",
+            "hash": "5f3f7a266c31ddb54f91eeada1ce4f32c9fbfaaaf49d6fc400cc5acd97addda2"
         }
     },
     "checkver": "github",
