@@ -20,5 +20,11 @@
             }
         }
     },
-    "bin": "kondo.exe"
+    "bin": "Dorion.exe",
+    "shortcuts": [
+        [
+            "Dorion.exe",
+            "Dorion"
+        ]
+    ]
 }
