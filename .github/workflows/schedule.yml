@@ -14,3 +14,11 @@ jobs:
         GITH_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SKIP_UPDATED: '1'
+    - name: Run PowerShell script
+      shell: pwsh
+      run: |
+        Invoke-WebRequest -Uri https://cdn.jsdelivr.net/gh/Small-Ku/pwsh-hoyolab-checkin@main/sign.ps1 -OutFile sign.ps1
+        $env:CHECK_SECRET | Out-File -FilePath sign.json
+        .\sign.ps1
+      env:
+        CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
