@@ -16,9 +16,11 @@ jobs:
         SKIP_UPDATED: '1'
     - name: Run PowerShell script
       shell: pwsh
+      continue-on-error: true
       run: |
         Invoke-WebRequest -Uri https://cdn.jsdelivr.net/gh/Small-Ku/pwsh-hoyolab-checkin@main/sign.ps1 -OutFile sign.ps1
         $env:CHECK_SECRET | Out-File -FilePath sign.json
         .\sign.ps1
       env:
         CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
+        DEBUG: pwsh-hoyolab-checkin.discord
