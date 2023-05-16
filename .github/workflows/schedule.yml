@@ -23,4 +23,3 @@ jobs:
         .\sign.ps1
       env:
         CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
-        DEBUG: pwsh-hoyolab-checkin.discord
