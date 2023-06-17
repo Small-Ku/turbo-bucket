@@ -26,12 +26,15 @@
         "jsonpath": "$[0].tag_name"
     },
     "suggest": {
-        ".Net": [
+        ".Net 7": [
             "extras/windowsdesktop-runtime",
             "main/dotnet-sdk"
         ]
     },
-    "notes": "If you are first updating to this version after the major Steam update, run \"Reset Steam\" on the old version of SFP before updating, or delete your steamui and clientui folders and restart Steam.",
+    "notes": [
+        ".Net 7 runtime is required.",
+        "If you are first updating to this version after the major Steam update, run \"Reset Steam\" on the old version of SFP before updating, or delete your steamui and clientui folders and restart Steam."
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {

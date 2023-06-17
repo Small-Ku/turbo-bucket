@@ -23,5 +23,14 @@
             }
         }
     },
-    "notes": "Exported files are not persisted."
+    "suggest": {
+        ".Net 7": [
+            "extras/windowsdesktop-runtime",
+            "main/dotnet-sdk"
+        ]
+    },
+    "notes": [
+        ".Net 7 runtime is required.",
+        "Exported files are not persisted."
+    ]
 }
