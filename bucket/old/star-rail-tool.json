@@ -13,7 +13,7 @@
     "bin": "srtool.exe",
     "pre_install": [
         "New-Item $persist_dir\\Config.json",
-        "New-Item $persist_dir\\Database.db",
+        "New-Item $persist_dir\\Database.db"
     ],
     "persist": [
         "Config.json",
