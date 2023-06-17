@@ -17,7 +17,6 @@
     "autoupdate": {
         "url": "https://nightly.link/jpochyla/psst/actions/runs/$matchId/Psst.exe.zip"
     },
-    "bin": "psst-gui.exe",
     "shortcuts": [
         [
             "psst-gui.exe",

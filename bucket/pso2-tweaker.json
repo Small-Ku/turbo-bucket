@@ -15,7 +15,6 @@
     "autoupdate": {
         "url": "https://github.com/Aida-Enna/PSO2TweakerReleases/blob/master/$matchVersion/PSO2 Tweaker.exe?raw=true"
     },
-    "bin": "PSO2 Tweaker.exe",
     "shortcuts": [
         [
             "PSO2 Tweaker.exe",
