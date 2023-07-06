@@ -9,10 +9,13 @@
     "url": "https://nightly.link/jpochyla/psst/actions/runs/5193141552/Psst.exe.zip",
     "hash": "3fa905b62328d4db0ad20a737450945cc6f1f6e46389d9b7ef60ac6b821d118c",
     "checkver": {
-        "url": "https://api.github.com/repos/jpochyla/psst/actions/workflows/build.yml/runs",
-        "jsonpath": "$.workflow_runs",
-        "regex": "\"id\":\\s*(?<id>\\d+),\\s*(\"[\\w_]+\":\\s*[\"\\w\\d:_\\/\\.\\-\\s]+,\\s*)*\"head_branch\":\\s*\"master\",\\s*\"head_sha\":\\s*\"(?<commit>[\\w\\d]{7})[\\w\\d]+\",\\s*(\"[\\w_]+\": ?[\"\\w\\d:_\\/\\.\\-#\\(\\)\\s]+,\\s*)*\"run_number\":\\s*(?<run>\\d+),\\s*(\"[\\w_]+\": ?[\"\\w\\d:_\\/\\.\\-\\s]+,\\s*)*\"conclusion\":\\s*\"success\"",
-        "replace": "0.0.${run}+${commit}.${id}"
+        "script": [
+            "$actions = Invoke-RestMethod -Uri 'https://api.github.com/repos/jpochyla/psst/actions/workflows/build.yml/runs'",
+            "$latest_develop = $actions.workflow_runs.PSObject.Properties.Value | Where-Object { $_.head_branch -eq 'master' } | Where-Object { $_.conclusion -eq 'success' } | Select-Object -first 1",
+            "$version = '0.0.' + $latest_develop.run_number + '+' + $latest_develop.head_sha.substring(0,7) + '.' + $latest_develop.id",
+            "Write-Output $version $latest_develop.id"
+        ],
+        "regex": "(?<version>[^\\s]+)\\s(?<id>\\d+)"
     },
     "autoupdate": {
         "url": "https://nightly.link/jpochyla/psst/actions/runs/$matchId/Psst.exe.zip"
