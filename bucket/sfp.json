@@ -1,12 +1,12 @@
 {
-    "version": "0.0.48",
+    "version": "0.0.49",
     "description": "This utility is designed to allow you to apply themes to the modern Steam friends and library interfaces",
     "homepage": "https://github.com/PhantomGamers/SFP",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PhantomGamers/SFP/releases/download/0.0.48/SFP_UI-win10-x64-net7.zip",
-            "hash": "7e23e8c8bbc62b7f2708d2d6664c8baed4c3e8ec825d942ce4b39d449cc5f18f"
+            "url": "https://github.com/PhantomGamers/SFP/releases/download/0.0.49/SFP_UI-win10-x64-net7.zip",
+            "hash": "3cc0ad40fabd05645b93ff336f16bedd1dcce12644baa1b70a912301cda93d3c"
         }
     },
     "pre_install": [
