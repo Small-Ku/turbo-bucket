@@ -34,6 +34,9 @@
             "Starward"
         ]
     ],
-    "persist": "data",
-    "notes": "Please choose the data folder in the installation folder as userdata storage."
+    "pre_install": [
+        "If (-not (Test-Path $persist_dir\\config.ini)) {\"UserDataFolder=$persist_dir\\data\" | Out-File $persist_dir\\config.ini}"
+    ],
+    "persist": ["data", "config.ini"],
+    "notes": "Setup wizard would be skipped because of preset value of user data by pre-install scripts."
 }
