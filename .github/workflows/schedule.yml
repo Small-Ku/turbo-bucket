@@ -15,7 +15,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SKIP_UPDATED: '1'
     - name: Run PowerShell script
-      shell: pwsh
+      shell: powershell
       continue-on-error: true
       run: |
         Invoke-WebRequest -Uri https://cdn.jsdelivr.net/gh/Small-Ku/pwsh-hoyolab-checkin@main/sign.ps1 -OutFile sign.ps1
