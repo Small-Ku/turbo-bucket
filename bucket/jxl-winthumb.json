@@ -1,12 +1,12 @@
 {
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "A JPEG XL (*.jxl) thumbnail handler for Windows File Explorer.",
     "homepage": "https://github.com/saschanaz/jxl-winthumb",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v0.2.2/jxl_winthumb.dll",
-            "hash": "071747efa359c2de5e085e63479282faabfa458e6d42ecb26bbc8db0aeef0683"
+            "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v0.2.3/jxl_winthumb.dll",
+            "hash": "36091c281cdc8ee63d710c40bf3391c9f1133100c51f343e8fa6d6e774235bfc"
         }
     },
     "depends": "sudo",
