@@ -1,5 +1,5 @@
 {
-    "version": "0.3.2-nightly.a234ae7",
+    "version": "0.4.1-nightly.a234ae7",
     "description": "Lightning-fast and Powerful Code Editor written in Rust (nightly builds)",
     "homepage": "http://lapce.dev/",
     "license": "Apache-2.0",
