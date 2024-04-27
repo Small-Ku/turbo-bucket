@@ -1,16 +1,16 @@
 {
     "homepage": "https://opencc.byvoid.com/",
     "description": "Open Chinese Convert Command Line Tool. (latest prebuilt)",
-    "version": "7a5ca4f",
+    "version": "145b9d7",
     "license": "APL-2.0",
     "architecture": {
         "64bit": {
             "url": "https://ci.appveyor.com/api/projects/Carbo/opencc/artifacts/OpenCC.zip?branch=master&job=Environment:%20nodejs_version=none;%20Platform:%20x64",
-            "hash": "9c4b51b8e424b0c1d227093faf40c84d07bb249d540ed46571952ad9d091384d"
+            "hash": "eb2f3ad4ce415ef6f087b05070e4038d2080cbd8213315f57d65916ae7b87d9b"
         },
         "32bit": {
             "url": "https://ci.appveyor.com/api/projects/Carbo/opencc/artifacts/OpenCC.zip?branch=master&job=Environment:%20nodejs_version=none;%20Platform:%20x86",
-            "hash": "9d577c96b4694245684593728d35ac11eeb6894d6638a238607a0212238d544c"
+            "hash": "cf9071879a7f16805190df7e5bdcdb038c21111e53759279cfa1500152b904e7"
         }
     },
     "extract_dir": "build",
