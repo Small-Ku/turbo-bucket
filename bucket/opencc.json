@@ -1,7 +1,7 @@
 {
     "homepage": "https://opencc.byvoid.com/",
     "description": "Open Chinese Convert Command Line Tool. (latest prebuilt)",
-    "version": "e5d33e8",
+    "version": "7a5ca4f",
     "license": "APL-2.0",
     "architecture": {
         "64bit": {
