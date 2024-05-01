@@ -1,12 +1,12 @@
 {
-    "version": "2.11.9-develop.fb7ec48",
+    "version": "2.11.9-develop.3f4f3d4",
     "description": "A client for QQ and more.",
     "homepage": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/Icalingua-plus-plus/Icalingua-plus-plus/actions/runs/8907198323/Icalingua_Windows64.exe.zip",
-            "hash": "04e8110ebdb1a3c0a8d3319c2a21c0c5b1508cbe07bef8affbde7412d73d2148",
+            "url": "https://nightly.link/Icalingua-plus-plus/Icalingua-plus-plus/actions/runs/8909091317/Icalingua_Windows64.exe.zip",
+            "hash": "6c4b5d8911b69efc32933dbf0c21f945f1bdbe9f367dfce7512a7fa5af2201f1",
             "pre_install": [
                 "$file = Get-ChildItem -Path $dir -Name -File -Include *.exe",
                 "Expand-7zipArchive \"$dir\\$file\" \"$dir\"",
@@ -16,8 +16,8 @@
             ]
         },
         "arm64": {
-            "url": "https://nightly.link/Icalingua-plus-plus/Icalingua-plus-plus/actions/runs/8907198323/Icalingua_Windows_arm64.exe.zip",
-            "hash": "f6a8b638457bc115a0c58970e877647e51179dae3b113be6ac26cc384de66b1b",
+            "url": "https://nightly.link/Icalingua-plus-plus/Icalingua-plus-plus/actions/runs/8909091317/Icalingua_Windows_arm64.exe.zip",
+            "hash": "d2fd7ab46d8bbcd0b794efbc5f59ea9e72d553987a3853f3ac68b16a3cd06a9c",
             "pre_install": [
                 "$file = Get-ChildItem -Path $dir -Name -File -Include *.exe",
                 "Expand-7zipArchive \"$dir\\$file\" \"$dir\"",
