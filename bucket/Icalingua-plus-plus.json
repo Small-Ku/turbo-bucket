@@ -1,20 +1,20 @@
 {
-    "version": "2.12.0",
+    "version": "2.12.2",
     "description": "A client for QQ and more.",
     "homepage": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.12.0/Icalingua++-2.12.0_x64.exe#/dl.7z",
-            "hash": "bff39c34678c3131910e818def1dbc5cd5b638481c70aa74f45d83aaee33d307",
+            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.12.2/Icalingua++-2.12.2_x64.exe#/dl.7z",
+            "hash": "d7424cc33f501f353ac9e36170368c4215e67391ba7fc7bd637044b70f89ac43",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.12.0/Icalingua++-2.12.0_arm64.exe#/dl.7z",
-            "hash": "f967884801e6a7801f3e1a8c9d68e505fd8accb80f0d4f3a975f622564333dd7",
+            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.12.2/Icalingua++-2.12.2_arm64.exe#/dl.7z",
+            "hash": "a57698f89e5f9b4d67729fa61199a9e27feaf5e62b7cec49e58c48b7f2692a87",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
