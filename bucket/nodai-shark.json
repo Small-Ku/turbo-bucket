@@ -1,5 +1,5 @@
 {
-    "version": "20240530.1298",
+    "version": "20240531.1300",
     "description": "SHARK - High Performance Machine Learning Distribution",
     "homepage": "https://github.com/nod-ai/SHARK",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nod-ai/SHARK/releases/download/20240530.1298/nodai_shark_studio_20240530_1298.exe#/nodai_shark_studio.exe",
-            "hash": "bc1342f762995a0fd465c103d93162133dac5dc321196ef65de607857af3ae8b"
+            "url": "https://github.com/nod-ai/SHARK/releases/download/20240531.1300/nodai_shark_studio_20240531_1300.exe#/nodai_shark_studio.exe",
+            "hash": "003d1977be5059a813d7d74ac4cdac1c3c428db50885c68aa7edf1bdb15db3a1"
         }
     },
     "persist": [
