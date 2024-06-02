@@ -14,12 +14,14 @@
             "hash": "2bdeb46597faa52ad005530c3730ceb14f30ddfb654155095d16f5117ca41501"
         }
     },
-    "installer": {
-        "script": [
-            "Move-Item -Path \"$dir\\install_tmp\\LunaTranslator\\*\" -Destination \"$dir\" -Force",
-            "Remove-Item \"$dir\\install_tmp\" -Force -Recurse"
-        ]
-    },
+    "pre_install": [
+        "if ($architecture -eq \"32bit\") {",
+        "   Move-Item -Path \"$dir\\install_tmp\\LunaTranslator_x86\\*\" -Destination \"$dir\" -Force",
+        "} else {",
+        "   Move-Item -Path \"$dir\\install_tmp\\LunaTranslator\\*\" -Destination \"$dir\" -Force",
+        "}",
+        "Remove-Item \"$dir\\install_tmp\" -Force -Recurse"
+    ],
     "shortcuts": [
         [
             "LunaTranslator.exe",
@@ -31,8 +33,7 @@
         ]
     ],
     "persist": [
-        "userconfig",
-        "files"
+        "userconfig"
     ],
     "checkver": "github",
     "autoupdate": {
