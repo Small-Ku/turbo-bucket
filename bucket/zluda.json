@@ -8,6 +8,7 @@
     },
     "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/rel.11cc5844514f93161e0e74387f04e2c537705a82/ZLUDA-windows-amd64.zip",
     "hash": "7a1731725f0300b7ecf17b9ac07854c986488428f6c619e0d535e564fc267799",
+    "extract_dir": "zluda",
     "bin": "zluda.exe",
     "env_add_path": ".",
     "checkver": {
