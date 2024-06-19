@@ -7,11 +7,11 @@
     "architecture": {
         "32bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.0.1/LunaTranslator_x86.zip",
-            "hash": "39cb46926487ee6dff68945151a46af9c1da6191339dfa58b27df74cb204ff96"
+            "hash": "13ce0e390b623b865e8b2f19761281f2703ef0de43dbaa31759357934d9f89e8"
         },
         "64bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.0.1/LunaTranslator.zip",
-            "hash": "3cc92b970431847cf1c0846c68791732750211d00d53dce13957c6adde7ba622"
+            "hash": "8e4577396daf4cfb3fce30bcf11de1aab3c9dde754f0b4c27fe8661abede5530"
         }
     },
     "pre_install": [
