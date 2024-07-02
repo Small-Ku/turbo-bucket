@@ -38,7 +38,7 @@
             "$rel_info = Invoke-RestMethod -Uri 'https://api.github.com/repos/HIllya51/LunaTranslator/releases'",
             "$latest = $rel_info | Sort-Object {$_.published_at} | Select-Object -last 1",
             "$latest_asset = $latest.assets | Where-Object { $_.name -eq 'LunaTranslator.zip' } | Select-Object -first 1",
-            "$latest_asset_updated_at = $latest_asset.updated_at -replace ('[\\-:TZ]', '')",
+            "$latest_asset_updated_at = $latest_asset.updated_at -replace ('[^\\d]', '')",
             "Write-Output (\"{0} {0}+{1}\" -f ($latest.tag_name, $latest_asset_updated_at))"
         ],
         "regex": "(?<tag>[\\d.]+)\\sv?(?<version>.+)"
