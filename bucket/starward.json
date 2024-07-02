@@ -1,5 +1,5 @@
 {
-    "version": "0.11.7-dev.1",
+    "version": "0.11.7-preview.1",
     "description": "Game Launcher for miHoYo/hoyoverse.",
     "homepage": "https://github.com/Scighost/Starward",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Scighost/Starward/releases/download/0.11.7-dev.1/Starward_Portable_0.11.7-dev.1_x64.7z",
-            "hash": "bc735b5c1ba82dc9b078ad442cd4c7fa6269481eb80f8549b09f2f100ff5dc9a"
+            "url": "https://github.com/Scighost/Starward/releases/download/0.11.7-preview.1/Starward_Portable_0.11.7-preview.1_x64.7z",
+            "hash": "05d3c5f547641a744e51bc2aaa3ef6e8364ded1b2bbb02d788581895fde43904"
         },
         "arm64": {
-            "url": "https://github.com/Scighost/Starward/releases/download/0.11.7-dev.1/Starward_Portable_0.11.7-dev.1_arm64.7z",
-            "hash": "bf29290975ff651e5ad496b096f4e9a4ac5ce2c00ce436ecb7650575d6d7cef4"
+            "url": "https://github.com/Scighost/Starward/releases/download/0.11.7-preview.1/Starward_Portable_0.11.7-preview.1_arm64.7z",
+            "hash": "e896b6e70db5688e793e74d27ed5c7e2024311102ef443eeab1ecfe568149edf"
         }
     },
     "checkver": {
