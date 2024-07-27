@@ -1,5 +1,5 @@
 {
-    "version": "0.147.0+71312e569-1.2.0",
+    "version": "0.147.0+c0df1e1846-1.2.0",
     "description": "A high-performance, multiplayer code editor. (Non-official build by shenjackyuanjie)",
     "homepage": "https://github.com/zed-industries/zed",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/shenjackyuanjie/zed-win-build/releases/download/0.147.0+71312e569-1.2.0/zed-0.147.0-71312e569.zip",
-            "hash": "e7e073d8144041787b783485f0be1d6b7895761ccbe0b5932e91eef86c960442"
+            "url": "https://github.com/shenjackyuanjie/zed-win-build/releases/download/0.147.0+c0df1e1846-1.2.0/zed-0.147.0-c0df1e1846.zip",
+            "hash": "8ee1fd856181cbe50d95f24f7a28dafb89d08b7956f8b3096aebd2af85bccfa8"
         }
     },
     "checkver": {
