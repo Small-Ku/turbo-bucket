@@ -1,17 +1,17 @@
 {
-    "version": "5.34.0+09052024094654",
+    "version": "5.34.1+09052024140038",
     "description": "Translation tool for Visual Novel (Galgame), with varies OCR/Hook/Clipboard support",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
     "license": "GPL-3.0-only",
     "extract_to": "install_tmp",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.34.0/LunaTranslator_x86.zip",
-            "hash": "dda8de3e6833f6a6c931226699fa0f7548953580281fbd5379a6596f979aa828"
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.34.1/LunaTranslator_x86.zip",
+            "hash": "94b8a23c62f900615d8ba4e6b106cc6a995c58fb2ea659d68064b7101a79c1fe"
         },
         "64bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.34.0/LunaTranslator.zip",
-            "hash": "c5a212d15aa01c623d83f59d0beb1f69a85e34071de406dff43bba01d6b2ec4e"
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.34.1/LunaTranslator.zip",
+            "hash": "e09f0d0fc7946c9a0cb9f08dc00d94fbc82260d5b30e3e70111c393d6c60cd7e"
         }
     },
     "pre_install": [
