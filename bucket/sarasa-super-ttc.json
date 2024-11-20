@@ -40,6 +40,7 @@
             "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
+            "    Remove-Item -LiteralPath \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
             "}"
         ]
