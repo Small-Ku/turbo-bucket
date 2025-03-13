@@ -25,7 +25,8 @@ jobs:
       - name: Signing
         shell: powershell
         continue-on-error: true
-        run: $env:CHECK_SECRET | Out-File -FilePath sign.json
+        run: |
+          $env:CHECK_SECRET | Out-File -FilePath sign.json
           .\sign.ps1
         env:
           CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
