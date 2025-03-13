@@ -1,15 +1,14 @@
 on:
-  pull_request:
-    types: [ opened ]
+  pull_request_target:
+    types: [opened]
 name: Pull Requests
 jobs:
   pullRequestHandler:
     name: Pull Request Validator
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@main
-    - name: Pull Request Validation
-      uses: shovel-org/GithubActions@main
-      env:
-        GITH_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@main
+      - name: Pull Request Validator
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
