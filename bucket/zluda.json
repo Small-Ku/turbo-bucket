@@ -1,13 +1,13 @@
 {
-    "version": "3.9.1",
+    "version": "3.9.2",
     "description": "CUDA on AMD GPUs.",
     "homepage": "https://github.com/lshqqytiger/ZLUDA",
     "license": {
         "identifier": "Apache-2.0",
         "url": "https://github.com/lshqqytiger/ZLUDA/blob/master/LICENSE"
     },
-    "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/rel.ae0540beb129ffd140226ce956b386619b38f84c/ZLUDA-nightly-windows-rocm6-amd64.zip",
-    "hash": "0d1b1e510d96fbaf0f8eb0d93dfb94aed1a46e64974a47ae943d9206394e8fb0",
+    "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/rel.dba64c0966df2c71e82255e942c96e2e1cea3a2d/ZLUDA-nightly-windows-rocm6-amd64.zip",
+    "hash": "2d43c5c13982c6e44d7131d061465111b5fb5719c08a169172f2d1c260c5dd00",
     "bin": "zluda.exe",
     "env_add_path": ".",
     "checkver": {
