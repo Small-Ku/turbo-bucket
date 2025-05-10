@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/babalae/better-genshin-impact/releases/download/v0.45.1/BetterGI_v0.45.1.7z",
+            "url": "https://github.com/babalae/better-genshin-impact/releases/download/0.45.1/BetterGI_v0.45.1.7z",
             "hash": "55dbe5596acb4475c982db1b9e1e54630223ebf2128a28a984ee3ae6bae66f11"
         }
     },
