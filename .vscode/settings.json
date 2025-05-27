@@ -2,7 +2,7 @@
     "editor.bracketPairColorization.enabled": true,
     "json.schemas": [
         {
-            "url": "https://raw.githubusercontent.com/Ash258/Scoop-Core/main/schema.json",
+            "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
             "fileMatch": [
                 ".vscode/Template.jsonc",
                 "bucket/*.json*",
@@ -21,7 +21,7 @@
         "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/appveyor.json": [
             "*appveyor.y*ml",
         ],
-        "https://raw.githubusercontent.com/Ash258/Scoop-Core/main/schema.json": [
+        "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json": [
             "bucket/*.y*ml",
             "bucket/old/**/*.y*ml",
             "deprecated/*.y*ml",
@@ -30,32 +30,5 @@
         "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/github-workflow.json": [
             ".github/workflows/*.y*ml",
         ],
-    },
-    "conventionalCommits.scopes": [
-        "packwiz",
-        "gpu-z-portable",
-        "psst",
-        "pso2-tweaker",
-        "qbittorrent-enhanced",
-        "reshade-addon",
-        "gotmpl",
-        "coqui-stt",
-        "kondo",
-        "nmkoder"
-    ],
-    "cSpell.words": [
-        "autoupdate",
-        "checkver",
-        "coqui",
-        "EPICGAMES",
-        "gotmpl",
-        "jsonpath",
-        "packwiz",
-        "PHANTASYSTARONLINE",
-        "PLUGINSDIR",
-        "qbittorrent",
-        "reshade",
-        "Tweaker",
-        "kondo"
-    ],
+    }
 }
