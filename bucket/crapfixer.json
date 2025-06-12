@@ -1,10 +1,10 @@
 {
-    "version": "1.13.103",
+    "version": "1.14.125",
     "description": "The tool that says what everyone’s thinking.",
     "homepage": "https://github.com/builtbybel/Crapfixer",
     "license": "MIT",
-    "url": "https://github.com/builtbybel/Crapfixer/releases/download/1.13.103/CrapFixer.zip",
-    "hash": "01372df0584e12e9eaa35449928f5d05c9734a4c9f4a060f076ce07365daa4e8",
+    "url": "https://github.com/builtbybel/Crapfixer/releases/download/1.14.125/CrapFixer.zip",
+    "hash": "3700bf0109b40081db7a00f38fc53f78e31d690dd49dccdca1749e06fa5e74d5",
     "shortcuts": [
         [
             "Crap Fixer.exe",
