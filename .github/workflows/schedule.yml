@@ -1,22 +1,23 @@
 on:
   schedule:
     - cron: '2 * * * *'
+  workflow_dispatch:
 name: Excavator
 jobs:
   excavate:
     name: Excavator
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v4
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: '1'
           THROW_ERROR: '0'
-  signing:
-    name: Signing
-    runs-on: windows-latest
+  signing-lab:
+    name: Signing Lab
+    runs-on: ubuntu-latest
     continue-on-error: true
     steps:
       - name: Checkout
@@ -24,38 +25,14 @@ jobs:
         with:
           repository: 'Small-Ku/pwsh-hoyolab-checkin'
       - name: Signing
-        shell: powershell
+        shell: pwsh
         run: |
           $env:CHECK_SECRET | Out-File -FilePath sign.json
           .\sign.ps1
         env:
           CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          repository: 'enpitsuLin/skland-daily-attendance'
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.9.0
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - name: Install dependencies
-        run: pnpm install
-      - name: Run daily attendance
-        run: pnpm attendance
-        env:
-          SKLAND_TOKEN: ${{ secrets.SKLAND_TOKEN }}
+  signing-land:
+    name: Signing Land
+    uses: enpitsulin/skland-daily-attendance/.github/workflows/schedule.yml@main
+    secrets: 
+      SKLAND_TOKEN: ${{ secrets.SKLAND_TOKEN }}
