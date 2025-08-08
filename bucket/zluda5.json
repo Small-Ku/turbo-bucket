@@ -1,0 +1,33 @@
+{
+    "version": "v5-preview.91",
+    "description": "CUDA on AMD GPUs.",
+    "homepage": "https://github.com/vosen/ZLUDA",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/vosen/ZLUDA/blob/master/LICENSE-APACHE"
+    },
+    "url": "https://github.com/vosen/ZLUDA/releases/download/v5-preview.91/zluda-windows-ef98c1e.zip",
+    "hash": "1d701535c4cd7f9f557561cd9f97058d4c5d362ef9e6a84348b97269f89e79e7",
+    "bin": "zluda_with.exe",
+    "env_add_path": ".",
+    "checkver": {
+        "script": [
+            "$rel_list = Invoke-RestMethod -Uri 'https://api.github.com/repos/vosen/ZLUDA/releases'",
+            "$rel = $rel_list | Sort-Object {$_.published_at} | Select-Object -last 1",
+            "$download_url = ($rel.assets | Where-Object { $_.name -match 'windows' } | Select-Object -first 1).browser_download_url",
+            "Write-Output $rel.tag_name $download_url"
+        ],
+        "regex": "(?<version>[\\w\\d.-]+)\\s(?<url>[^\\s]+)"
+    },
+    "installer": {
+        "script": [
+            "if (Test-Path \"$dir\\zluda\") {",
+            "Move-Item \"$dir\\zluda\\*\" \"$dir\"",
+            "Remove-Item -Recurse \"$dir\\zluda\"",
+            "}"
+        ]
+    },
+    "autoupdate": {
+        "url": "$matchUrl"
+    }
+}
