@@ -1,10 +1,10 @@
 {
-    "version": "0.0.1-rel.232087627",
+    "version": "0.0.1-rel.239603245",
     "description": "An fast and accurate tool for exporting Honkai: Star Rail achievements.",
     "homepage": "https://github.com/juliuskreutz/stardb-exporter",
     "license": "Unknown",
-    "url": "https://github.com/juliuskreutz/stardb-exporter/releases/download/v2.10.1/stardb-exporter.exe",
-    "hash": "5db712b5d16d466f5443aaea0cf58705f9395f954b2bacf97ae3f3bf12d864f6",
+    "url": "https://github.com/juliuskreutz/stardb-exporter/releases/download/v2.11.1/stardb-exporter.exe",
+    "hash": "d78cc0943d09f585e96aba83ed8cbb2a6dfdcb2e958e4f40028262c6b185095f",
     "bin": "stardb-exporter.exe",
     "shortcuts": [
         [
