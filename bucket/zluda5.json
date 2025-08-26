@@ -1,13 +1,13 @@
 {
-    "version": "v5-preview.100",
+    "version": "v5-preview.101",
     "description": "CUDA on AMD GPUs.",
     "homepage": "https://github.com/vosen/ZLUDA",
     "license": {
         "identifier": "Apache-2.0",
         "url": "https://github.com/vosen/ZLUDA/blob/master/LICENSE-APACHE"
     },
-    "url": "https://github.com/vosen/ZLUDA/releases/download/v5-preview.100/zluda-windows-de319f7.zip",
-    "hash": "6f672a2d15b652ec05e63d8e7e293c75d00d07af2d8205ccbe4b377f280711f9",
+    "url": "https://github.com/vosen/ZLUDA/releases/download/v5-preview.101/zluda-windows-62d340e.zip",
+    "hash": "308f2f571a03da5ac983bba6455de811431de27c5a5b31077f107bfc09dc2539",
     "bin": "zluda_with.exe",
     "env_add_path": ".",
     "checkver": {
