@@ -38,35 +38,19 @@
         ]
     },
     "checkver": {
-        "url": "https://api.github.com/repos/saschanaz/jxl-winthumb/tags",
-        "jsonpath": "$.[0].name",
-        "regex": "v([\\d.]+)"
+        "url": "https://github.com/saschanaz/jxl-winthumb/tags",
+        "regex": "releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "arm64": {
-                "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v$version/jxl_winthumb_aarch64.dll",
-                "hash": {
-                    "mode": "json",
-                    "jsonpath": "$..[?(@.tag_name == 'v$version')].assets..[?(@.browser_download_url == '$url')].digest",
-                    "url": "https://api.github.com/repos/saschanaz/jxl-winthumb/releases"
-                }
+                "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v$version/jxl_winthumb_aarch64.dll"
             },
             "64bit": {
-                "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v$version/jxl_winthumb_x86_64.dll",
-                "hash": {
-                    "mode": "json",
-                    "jsonpath": "$..[?(@.tag_name == 'v$version')].assets..[?(@.browser_download_url == '$url')].digest",
-                    "url": "https://api.github.com/repos/saschanaz/jxl-winthumb/releases"
-                }
+                "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v$version/jxl_winthumb_x86_64.dll"
             },
             "32bit": {
-                "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v$version/jxl_winthumb_i686.dll",
-                "hash": {
-                    "mode": "json",
-                    "jsonpath": "$..[?(@.tag_name == 'v$version')].assets..[?(@.browser_download_url == '$url')].digest",
-                    "url": "https://api.github.com/repos/saschanaz/jxl-winthumb/releases"
-                }
+                "url": "https://github.com/saschanaz/jxl-winthumb/releases/download/v$version/jxl_winthumb_i686.dll"
             }
         }
     }
