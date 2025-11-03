@@ -13,17 +13,13 @@
             "$rel_info = Invoke-RestMethod -Uri 'https://api.github.com/repos/jpochyla/psst/releases'",
             "$latest_rel = $rel_info | Sort-Object {$_.published_at} | Select-Object -last 1",
             "$latest_exe = $latest_rel.assets | Where-Object {$_.name.EndsWith(\".exe\")} | Sort-Object {$_.published_at} | Select-Object -last 1",
-            "Write-Output $latest_rel.name $latest_exe.browser_download_url"
+            "Write-Output $latest_rel.name $latest_exe.browser_download_url $latest_exe.digest"
         ],
-        "regex": "\\((?<version>[\\w\\d.-]+)\\)\\s+(?<url>[^\\s]+)"
+        "regex": "\\((?<version>[\\w\\d.-]+)\\)\\s+(?<url>[^\\s]+)\\s(?<hash>[^\\s]+)?"
     },
     "autoupdate": {
         "url": "$matchUrl#/psst.exe",
-        "hash": {
-            "mode": "json",
-            "jsonpath": "$..[?(@.tag_name)].assets..[?(@.browser_download_url == '$url')].digest",
-            "url": "https://api.github.com/repos/jpochyla/psst/releases"
-        }
+        "hash": "$matchHash"
     },
     "shortcuts": [
         [

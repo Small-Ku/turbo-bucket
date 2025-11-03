@@ -14,11 +14,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/juliuskreutz/stardb-exporter/releases/download/v$version/stardb-exporter-v$version-x86_64-pc-windows-msvc.zip",
-        "hash": {
-            "mode": "json",
-            "jsonpath": "$..[?(@.tag_name == 'v$version')].assets..[?(@.browser_download_url == '$url')].digest",
-            "url": "https://api.github.com/repos/juliuskreutz/stardb-exporter/releases"
-        }
+        "url": "https://github.com/juliuskreutz/stardb-exporter/releases/download/v$version/stardb-exporter-v$version-x86_64-pc-windows-msvc.zip"
     }
 }
