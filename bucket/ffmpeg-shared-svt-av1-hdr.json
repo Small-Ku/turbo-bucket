@@ -1,18 +1,18 @@
 {
-    "version": "N-121950-g932a872dbc",
+    "version": "N-121953-g27e94281d1",
     "description": "A complete, cross-platform solution to record, convert and stream audio and video build with SVT-AV1-HDR.",
     "homepage": "https://github.com/QuickFatHedgehog/FFmpeg-Builds-SVT-AV1-HDR",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/QuickFatHedgehog/FFmpeg-Builds-SVT-AV1-HDR/releases/download/autobuild-2025-11-30-22-46/ffmpeg-N-121950-g932a872dbc-win64-gpl-shared.zip",
-            "hash": "1bc0945560fd99309de8482db8e2d36fe1593b69de2159efe4cb7b02803f4caf",
-            "extract_dir": "ffmpeg-N-121950-g932a872dbc-win64-gpl-shared"
+            "url": "https://github.com/QuickFatHedgehog/FFmpeg-Builds-SVT-AV1-HDR/releases/download/autobuild-2025-12-01-22-51/ffmpeg-N-121953-g27e94281d1-win64-gpl-shared.zip",
+            "hash": "d81df5c2f9cbb7de709e31bb6a06041fa0911bf47d9c5c571837f905c4d33dd8",
+            "extract_dir": "ffmpeg-N-121953-g27e94281d1-win64-gpl-shared"
         },
         "arm64": {
-            "url": "https://github.com/QuickFatHedgehog/FFmpeg-Builds-SVT-AV1-HDR/releases/download/autobuild-2025-11-30-22-46/ffmpeg-N-121950-g932a872dbc-winarm64-gpl-shared.zip",
-            "hash": "5f1162283219e578369a4fb14e46f28a241dffc8ec400c5c29950f548c60a3b6",
-            "extract_dir": "ffmpeg-N-121950-g932a872dbc-winarm64-gpl-shared"
+            "url": "https://github.com/QuickFatHedgehog/FFmpeg-Builds-SVT-AV1-HDR/releases/download/autobuild-2025-12-01-22-51/ffmpeg-N-121953-g27e94281d1-winarm64-gpl-shared.zip",
+            "hash": "540cff44c0880815a24e9980f32deb4369eb3a838d67d06818dec28718fba966",
+            "extract_dir": "ffmpeg-N-121953-g27e94281d1-winarm64-gpl-shared"
         }
     },
     "post_install": [
