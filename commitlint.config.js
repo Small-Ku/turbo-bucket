@@ -1,3 +1,4 @@
+javascript
 const Configuration = {
     rules: {
         'body-leading-blank': [1, 'always'],
@@ -14,7 +15,6 @@ const Configuration = {
         'type-empty': [2, 'never'],
         'type-enum': [2, "always", ['add', 'remove', 'update', 'fix', 'chore']]
     },
-    defaultIgnores: true,
     helpUrl:
         'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
 };
