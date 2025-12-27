@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '2 * * * *'
+    - cron: '2 */2 * * *'
   workflow_dispatch:
 name: Excavator
 jobs:
@@ -14,25 +14,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: '1'
-          THROW_ERROR: '0'
-  signing-lab:
-    name: Signing Lab
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          repository: 'Small-Ku/pwsh-hoyolab-checkin'
-      - name: Signing
-        shell: pwsh
-        run: |
-          $env:CHECK_SECRET | Out-File -FilePath sign.json
-          .\sign.ps1
-        env:
-          CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
-  signing-land:
-    name: Signing Land
-    uses: enpitsulin/skland-daily-attendance/.github/workflows/schedule.yml@main
-    secrets: 
-      SKLAND_TOKEN: ${{ secrets.SKLAND_TOKEN }}
