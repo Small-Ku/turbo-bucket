@@ -6,9 +6,29 @@ jobs:
   pullRequestHandler:
     name: Pull Request Validator
     runs-on: windows-latest
+    permissions:
+      pull-requests: write
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install git-filter-repo
+        run: |
+          pip install git-filter-repo
+      - name: Run Filter Repo
+        run: |
+          git filter-repo --refs $BASE_REF..$HEAD_REF --replace-message .github/git-filter.txt --force
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.head_ref }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

@@ -1,0 +1,3 @@
+regex:([\w\d-]+):\s*Update to version==>update(\1):
+regex:([\w\d-]+)@([^:]+):\s*Fix hash \(Closes (#\d+)\)==>fix(\1): \3 hash-fix@\2
+regex:([\w\d-]+)@([^:]+):\s*Fix hash==>fix(\1): hash-fix@\2
