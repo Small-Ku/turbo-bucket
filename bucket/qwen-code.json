@@ -16,7 +16,7 @@
     },
     "pre_install": [
         "New-Item -Path $persist_dir -ItemType Directory -Force | Out-Null",
-        "if (!(Test-Path -Path $persist_dir\\system-defaults.json)) { New-Item -Path $persist_dir\\system-defaults.json -ItemType File -Force | Out-Null }"
+        "if (!(Test-Path -Path $persist_dir\\system-defaults.json)) { New-Item -Path $persist_dir\\system-defaults.json -ItemType File -Value '{}' -Force | Out-Null }"
     ],
     "uninstaller": {
         "script": "pushd $dir; bun rm @qwen-code/qwen-code; popd"
