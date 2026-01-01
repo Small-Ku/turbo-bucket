@@ -22,10 +22,11 @@ jobs:
           pip install git-filter-repo
       - name: Run Filter Repo
         run: |
-          git filter-repo --refs $BASE_REF..$HEAD_REF --replace-message .github/git-filter.txt --force
+          git update-ref refs/BEFORE $env:BASE_REF
+          git filter-repo --refs refs/BEFORE..HEAD --replace-message .github/git-filter.txt --force
+          git update-ref -d refs/BEFORE
         env:
           BASE_REF: ${{ github.base_ref }}
-          HEAD_REF: ${{ github.head_ref }}
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

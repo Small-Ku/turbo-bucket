@@ -15,8 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Get Initial HEAD
-        id: vars
-        run: echo "PRE_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+        run: git update-ref refs/BEFORE $(git rev-parse HEAD)
 
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
@@ -30,9 +29,8 @@ jobs:
 
       - name: Run Filter Repo
         run: |
-          git filter-repo --refs $PRE_HASH..HEAD --replace-message .github/git-filter.txt --force
-        env:
-          PRE_HASH: ${{ env.PRE_HASH }}
+          git filter-repo --refs refs/BEFORE..HEAD --replace-message .github/git-filter.txt --force
+          git update-ref -d refs/BEFORE
 
       - name: Push changes
         uses: ad-m/github-push-action@master
