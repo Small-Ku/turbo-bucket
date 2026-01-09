@@ -4,18 +4,18 @@
         "identifier": "GPL-2.0-or-later",
         "url": "https://github.com/anthwlock/untrunc/blob/master/COPYING"
     },
-    "version": "2635100",
+    "version": "789908e",
     "description": "Restore a truncated mp4/mov. Improved version of ponchio/untrunc.",
     "architecture": {
         "32bit": {
             "extract_dir": "untrunc_x32",
             "url": "https://github.com/anthwlock/untrunc/releases/download/latest/untrunc_x32.zip",
-            "hash": "fdce2764a6395fb89644c1a08a0f2f4a79efeed97e35ee5afb3d4ec0e7da531f"
+            "hash": "3a2e94f163f5d163ce88e6f1a6a70e6f714b2740e4f50757d06384d8e0ee2503"
         },
         "64bit": {
             "extract_dir": "untrunc_x64",
             "url": "https://github.com/anthwlock/untrunc/releases/download/latest/untrunc_x64.zip",
-            "hash": "d5fca800391be4b465d57f3aa2cfc692c48e2a53a901a8efa9ec1d9b15978d2a"
+            "hash": "2fb648d2ca53e2b76b4513481a30d65da75e86696d460a43a21fc736a964d326"
         }
     },
     "shortcuts": [
