@@ -1,10 +1,10 @@
 {
-    "version": "3.3.46",
+    "version": "3.3.47",
     "description": "Antigravity account manager.",
     "homepage": "https://github.com/lbjlaq/Antigravity-Manager",
     "license": "CC-BY-NC-SA-4.0",
-    "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v3.3.46/Antigravity.Tools_3.3.46_x64-setup.exe#/dl.zip",
-    "hash": "838467ba38ac7437517b51afc7c1a8aeb5c51b257543d97e6590560a7980f733",
+    "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v3.3.47/Antigravity.Tools_3.3.47_x64-setup.exe#/dl.zip",
+    "hash": "0fc6600ee80cc6dc8894e8b40e9c29f56e3e99f7767030eb532c4a7ae0052282",
     "shortcuts": [
         [
             "antigravity_tools.exe",
