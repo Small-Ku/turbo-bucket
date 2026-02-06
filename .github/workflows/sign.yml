@@ -5,14 +5,14 @@ on:
 name: Signing
 jobs:
   signing-lab:
-    name: Signing Lab
+    name: Signing Labport
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: 'Small-Ku/pwsh-hoyolab-checkin'
+          repository: 'Small-Ku/pwsh-anime-attendance'
       - name: Signing
         shell: pwsh
         run: |
