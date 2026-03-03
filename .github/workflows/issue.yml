@@ -6,10 +6,29 @@ jobs:
   issueHandler:
     name: Issue Handler
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+      - name: Get Initial HEAD
+        run: git update-ref refs/BEFORE $(git rev-parse HEAD)
       - name: Issue Handler
         uses: ScoopInstaller/Scoop-GithubActions@main
         if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install git-filter-repo
+        run: |
+          pip install git-filter-repo
+      - name: Run Filter Repo
+        run: |
+          git filter-repo --refs refs/BEFORE..HEAD --replace-message .github/git-filter.txt --force
+          git update-ref -d refs/BEFORE
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true

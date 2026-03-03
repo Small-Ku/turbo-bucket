@@ -13,6 +13,8 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
+      - name: Get Initial HEAD
+        run: git update-ref refs/BEFORE $(git rev-parse HEAD)
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         env:

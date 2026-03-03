@@ -8,8 +8,25 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+      - name: Get Initial HEAD
+        run: git update-ref refs/BEFORE $(git rev-parse HEAD)
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         if: startsWith(github.event.comment.body, '/verify')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install git-filter-repo
+        run: |
+          pip install git-filter-repo
+      - name: Run Filter Repo
+        run: |
+          git filter-repo --refs refs/BEFORE..HEAD --replace-message .github/git-filter.txt --force
+          git update-ref -d refs/BEFORE
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true
