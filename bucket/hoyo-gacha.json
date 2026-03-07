@@ -1,12 +1,12 @@
 {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "An unofficial tool for managing and analyzing your hoyoverse/miHoYo gacha records.",
     "homepage": "https://github.com/lgou2w/HoYo.Gacha",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lgou2w/HoYo.Gacha/releases/download/1.2.0/HoYo.Gacha.exe",
-            "hash": "3a4c5ac29abeac9c5cffb2366eea7bd40b666c8b0f2b7bcdd3ff4bf7c38a9518"
+            "url": "https://github.com/lgou2w/HoYo.Gacha/releases/download/1.2.1/HoYo.Gacha.exe",
+            "hash": "37c13305fe4b43eac0d9e1cf9f36e359dfff30594e7f6dc9dee9f2132e823760"
         }
     },
     "shortcuts": [
