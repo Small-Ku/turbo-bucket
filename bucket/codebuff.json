@@ -1,5 +1,5 @@
 {
-    "version": "1.0.630",
+    "version": "1.0.631",
     "description": "The world's strongest free coding agent (with bun)",
     "homepage": "https://codebuff.com/",
     "license": "Apache-2.0",
@@ -12,7 +12,7 @@
         ]
     ],
     "installer": {
-        "script": "pushd $dir; bun add --bun codebuff@1.0.630; popd;"
+        "script": "pushd $dir; bun add --bun codebuff@1.0.631; popd;"
     },
     "uninstaller": {
         "script": "pushd $dir; bun rm codebuff; popd;"
