@@ -19,16 +19,37 @@ jobs:
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install git-filter-repo
+      - name: Install required tools
         run: |
           pip install git-filter-repo
+          npm install -g @biomejs/biome
       - name: Run Filter Repo
         run: |
-          git update-ref refs/BEFORE $env:BASE_REF
-          git filter-repo --refs refs/BEFORE..HEAD --replace-message .github/git-filter.txt --force
+          CONFIG_PATH="$(pwd)/biome.json"
+          git update-ref refs/BEFORE ${{ github.base_ref }}
+          git filter-repo --force `
+            --refs refs/BEFORE..HEAD `
+            --replace-message .github/git-filter.txt `
+            --blob-callback "
+            import subprocess
+
+            target_exts = [b'.json']
+            config_file = '$CONFIG_PATH'
+
+            if any(metadata.filename.endswith(ext) for ext in target_exts):
+                try:
+                    process = subprocess.run(
+                        ['biome', 'format', '--stdin-file-path', metadata.filename.decode(), '--config-path', config_file],
+                        input=blob.data,
+                        capture_output=True,
+                        check=True
+                    )
+                    if process.stdout:
+                        blob.data = process.stdout
+                except Exception:
+                    pass
+            "
           git update-ref -d refs/BEFORE
-        env:
-          BASE_REF: ${{ github.base_ref }}
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
