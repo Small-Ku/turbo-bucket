@@ -13,8 +13,6 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
-      - name: Get Initial HEAD
-        run: git update-ref refs/BEFORE $(git rev-parse HEAD)
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         env:
@@ -24,30 +22,50 @@ jobs:
           pip install git-filter-repo
           npm install -g @biomejs/biome
       - name: Run Filter Repo
+        shell: pwsh
+        env:
+          BIOME_CONFIG: ${{ github.workspace }}/biome.json
         run: |
-          CONFIG_PATH="$(pwd)/biome.json"
-          git update-ref refs/BEFORE ${{ github.base_ref }}
+          $FixedConfig = $env:BIOME_CONFIG.Replace('\', '/')   
+          git update-ref refs/BEFORE ${{ github.base_ref }}       
           git filter-repo --force `
             --refs refs/BEFORE..HEAD `
             --replace-message .github/git-filter.txt `
-            --blob-callback "
+            --file-info-callback "
             import subprocess
+            
+            if not filename.startswith(b'bucket/') or not filename.endswith(b'.json'):
+                return (filename, mode, blob_id)
 
-            target_exts = [b'.json']
-            config_file = '$CONFIG_PATH'
+            print(f'--- Checking: {filename.decode()} ---')
 
-            if any(metadata.filename.endswith(ext) for ext in target_exts):
-                try:
-                    process = subprocess.run(
-                        ['biome', 'format', '--stdin-file-path', metadata.filename.decode(), '--config-path', config_file],
-                        input=blob.data,
-                        capture_output=True,
-                        check=True
-                    )
-                    if process.stdout:
-                        blob.data = process.stdout
-                except Exception:
-                    pass
+            if blob_id in value.data:
+                return (filename, mode, value.data[blob_id])
+
+            try:
+                contents = value.get_contents_by_identifier(blob_id)
+
+                process = subprocess.run(
+                    ['biome', 'format', '--stdin-file-path', filename.decode(), '--config-path', '$FixedConfig'],
+                    input=contents,
+                    capture_output=True,
+                    check=True,
+                    shell=True
+                )
+
+                if process.stdout and process.stdout != contents:
+                    print(f'      [FORMATTED] {filename.decode()}')
+                    new_blob_id = value.insert_file_with_contents(process.stdout)
+                    value.data[blob_id] = new_blob_id
+                    return (filename, mode, new_blob_id)
+                else:
+                    print(f'      [NO CHANGE] {filename.decode()}')
+
+            except Exception as e:
+                print(f'      [ERROR] {filename.decode()}: {str(e)}')
+                pass
+
+            return (filename, mode, blob_id)
             "
           git update-ref -d refs/BEFORE
       - name: Push changes
