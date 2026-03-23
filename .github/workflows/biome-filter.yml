@@ -1,0 +1,92 @@
+name: Biome Filter Repo
+on:
+  workflow_call:
+    inputs:
+      before_sha:
+        description: 'SHA to use as start of filter-repo range (refs/BEFORE will be set to this)'
+        type: string
+        required: true
+      push_branch:
+        description: 'The branch to force-push to'
+        type: string
+        required: true
+      checkout_ref:
+        description: 'The ref to checkout (default: uses actions/checkout default)'
+        type: string
+        default: ''
+    secrets:
+      GITHUB_TOKEN:
+        required: true
+
+jobs:
+  biome-filter:
+    name: Biome Format + Filter Repo
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.checkout_ref }}
+          fetch-depth: 0
+
+      - name: Install required tools
+        run: |
+          pip install git-filter-repo
+          npm install -g @biomejs/biome
+
+      - name: Run Filter Repo
+        shell: pwsh
+        env:
+          BIOME_CONFIG: ${{ github.workspace }}/biome.json
+          BEFORE_SHA: ${{ inputs.before_sha }}
+        run: |
+          $FixedConfig = $env:BIOME_CONFIG.Replace('\', '/')
+          git update-ref refs/BEFORE $env:BEFORE_SHA
+
+          git filter-repo --force `
+            --refs refs/BEFORE..HEAD `
+            --replace-message .github/git-filter.txt `
+            --file-info-callback "
+          import subprocess
+
+          if not filename.startswith(b'bucket/') or not filename.endswith(b'.json'):
+              return (filename, mode, blob_id)
+
+          print(f'--- Checking: {filename.decode()} ---')
+
+          if blob_id in value.data:
+              return (filename, mode, value.data[blob_id])
+
+          try:
+              contents = value.get_contents_by_identifier(blob_id)
+
+              process = subprocess.run(
+                  ['biome', 'format', '--stdin-file-path', filename.decode(), '--config-path', '$FixedConfig'],
+                  input=contents,
+                  capture_output=True,
+                  check=True,
+                  shell=True
+              )
+
+              output = process.stdout.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+              if output != contents and output:
+                  print(f'      [FORMATTED] {filename.decode()}')
+                  new_blob_id = value.insert_file_with_contents(output)
+                  value.data[blob_id] = new_blob_id
+                  return (filename, mode, new_blob_id)
+              else:
+                  print(f'      [NO CHANGE] {filename.decode()}')
+
+          except Exception as e:
+              print(f'      [ERROR] {filename.decode()}: {str(e)}')
+              pass
+
+          return (filename, mode, blob_id)
+          "
+          git update-ref -d refs/BEFORE
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ inputs.push_branch }}
+          force: true

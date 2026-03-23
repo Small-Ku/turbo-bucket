@@ -6,70 +6,27 @@ jobs:
   pullRequestHandler:
     name: Pull Request Validator
     runs-on: windows-latest
+    outputs:
+      before_sha: ${{ steps.before.outputs.sha }}
     steps:
       - uses: actions/checkout@main
         with:
           fetch-depth: 0
       - name: Get Initial HEAD
-        run: git update-ref refs/BEFORE $(git rev-parse HEAD)
+        id: before
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         if: startsWith(github.event.comment.body, '/verify')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install required tools
-        run: |
-          pip install git-filter-repo
-          npm install -g @biomejs/biome
-      - name: Run Filter Repo
-        shell: pwsh
-        env:
-          BIOME_CONFIG: ${{ github.workspace }}/biome.json
-        run: |
-          $FixedConfig = $env:BIOME_CONFIG.Replace('\', '/')          
-          git filter-repo --force `
-            --refs refs/BEFORE..HEAD `
-            --replace-message .github/git-filter.txt `
-            --file-info-callback "
-            import subprocess
-            
-            if not filename.startswith(b'bucket/') or not filename.endswith(b'.json'):
-                return (filename, mode, blob_id)
 
-            print(f'--- Checking: {filename.decode()} ---')
-
-            if blob_id in value.data:
-                return (filename, mode, value.data[blob_id])
-
-            try:
-                contents = value.get_contents_by_identifier(blob_id)
-
-                process = subprocess.run(
-                    ['biome', 'format', '--stdin-file-path', filename.decode(), '--config-path', '$FixedConfig'],
-                    input=contents,
-                    capture_output=True,
-                    check=True,
-                    shell=True
-                )
-
-                if process.stdout and process.stdout != contents:
-                    print(f'      [FORMATTED] {filename.decode()}')
-                    new_blob_id = value.insert_file_with_contents(process.stdout)
-                    value.data[blob_id] = new_blob_id
-                    return (filename, mode, new_blob_id)
-                else:
-                    print(f'      [NO CHANGE] {filename.decode()}')
-
-            except Exception as e:
-                print(f'      [ERROR] {filename.decode()}: {str(e)}')
-                pass
-
-            return (filename, mode, blob_id)
-            "
-          git update-ref -d refs/BEFORE
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-          force: true
+  biome-format:
+    name: Biome Format
+    needs: pullRequestHandler
+    uses: ./.github/workflows/biome-filter.yml
+    with:
+      before_sha: ${{ needs.pullRequestHandler.outputs.before_sha }}
+      push_branch: ${{ github.ref }}
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
