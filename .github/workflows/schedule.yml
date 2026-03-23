@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '2 */2 * * *'
+    - cron: '2 * * * *'
   workflow_dispatch:
 name: Excavator
 jobs:
@@ -11,18 +11,24 @@ jobs:
       contents: write
     outputs:
       before_sha: ${{ steps.before.outputs.sha }}
+      after_sha: ${{ steps.after.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Get Initial HEAD
         id: before
-        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        shell: pwsh
+        run: echo "sha=$(git rev-parse HEAD)" >> $env:GITHUB_OUTPUT
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: '1'
+      - name: Get Final HEAD
+        id: after
+        shell: pwsh
+        run: echo "sha=$(git rev-parse HEAD)" >> $env:GITHUB_OUTPUT
 
   biome-format:
     name: Biome Format
@@ -30,6 +36,5 @@ jobs:
     uses: ./.github/workflows/biome-filter.yml
     with:
       before_sha: ${{ needs.excavate.outputs.before_sha }}
+      checkout_ref: ${{ needs.excavate.outputs.after_sha }}
       push_branch: ${{ github.ref }}
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -17,7 +17,8 @@ jobs:
           fetch-depth: 0
       - name: Get Initial HEAD
         id: before
-        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        shell: pwsh
+        run: echo "sha=$(git rev-parse HEAD)" >> $env:GITHUB_OUTPUT
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         env:
@@ -31,5 +32,3 @@ jobs:
       before_sha: ${{ needs.pullRequestHandler.outputs.before_sha }}
       push_branch: ${{ github.head_ref }}
       checkout_ref: ${{ github.head_ref }}
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

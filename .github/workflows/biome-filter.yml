@@ -14,9 +14,6 @@ on:
         description: 'The ref to checkout (default: uses actions/checkout default)'
         type: string
         default: ''
-    secrets:
-      GITHUB_TOKEN:
-        required: true
 
 jobs:
   biome-filter:
@@ -67,7 +64,7 @@ jobs:
                   shell=True
               )
 
-              output = process.stdout.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+              output = process.stdout.replace(b'\r\n', b'\n')
               if output != contents and output:
                   print(f'      [FORMATTED] {filename.decode()}')
                   new_blob_id = value.insert_file_with_contents(output)
