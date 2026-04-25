@@ -38,5 +38,6 @@
 			}
 		}
 	},
+	"persist": ["cache", "config", "debug"],
 	"shortcuts": [["MaaEnd.exe", "MaaEnd"]]
 }
