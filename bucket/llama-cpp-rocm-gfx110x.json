@@ -1,12 +1,12 @@
 {
-	"version": "b1255",
+	"version": "b1256",
 	"description": "Inference of LLaMA model in pure C/C++ (ROCm7 version for AMD gfx110X)",
 	"homepage": "https://github.com/lemonade-sdk/llamacpp-rocm",
 	"license": "MIT",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/lemonade-sdk/llamacpp-rocm/releases/download/b1255/llama-b1255-windows-rocm-gfx110X-x64.zip",
-			"hash": "d707465bb07379405ea8d2e5172ab7a42bbc2d494a065f500f372c2ec870fa3a"
+			"url": "https://github.com/lemonade-sdk/llamacpp-rocm/releases/download/b1256/llama-b1256-windows-rocm-gfx110X-x64.zip",
+			"hash": "498936c37f93e51388ad299cd259d13d86508143f1ff2c10fbd8c696194780fe"
 		}
 	},
 	"env_add_path": ".",
