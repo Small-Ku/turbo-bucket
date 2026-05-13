@@ -242,6 +242,26 @@ Match captured groups from checkver using `$matchGroupName`:
 }
 ```
 
+### 7. Software Addition Checklist
+
+Follow this order when adding a new app:
+
+1. Inspect the upstream release page or GitHub API first.
+2. Identify the exact Windows asset to ship, including the final on-disk filename.
+3. Decide whether the manifest should rename the download with a `#/name.exe` fragment before writing `bin` or `shortcuts`.
+4. Use the release asset digest from GitHub when it is available.
+5. Keep `url`, `autoupdate.url`, `bin`, and `shortcuts` aligned with the same final filename.
+6. Run Biome formatting and then validate the manifest as JSON.
+7. If the bucket test harness is unavailable in this environment, report the blocker instead of pretending the test ran.
+
+Do not:
+
+1. Guess the asset name or filename from the repo name alone.
+2. Leave `bin` or `shortcuts` pointing at a temporary release filename after adding a rename fragment.
+3. Add placeholder hashes, placeholder URLs, or placeholder update rules if the real release metadata is available.
+4. Use `scoop bucket test .` as proof of validation if the local Scoop wrapper routes to a different tool or the required test module is missing.
+5. Commit a manifest before checking whether the portable build already ships as the desired executable name.
+
 ## Validation Workflow
 
 ### Automatic Checks (GitHub Actions)
