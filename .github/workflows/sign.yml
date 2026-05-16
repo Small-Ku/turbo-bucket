@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 name: Signing
 jobs:
-  signing-lab:
-    name: Signing Labport
+  signing:
+    name: Signing
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
@@ -20,13 +20,3 @@ jobs:
           .\sign.ps1
         env:
           CHECK_SECRET: ${{ secrets.CHECK_SECRET }}
-  signing-land:
-    name: Signing Land
-    uses: AEtherside/skland-daily-attendance/.github/workflows/schedule.yml@main
-    with:
-      repository: AEtherside/skland-daily-attendance
-    secrets:
-      SKLAND_TOKENS: ${{ secrets.SKLAND_TOKENS }}
-      SKLAND_NOTIFICATION_URLS: ${{ secrets.SKLAND_NOTIFICATION_URLS }}
-      MAX_RETRIES: ${{ secrets.SKLAND_MAX_RETRIES }}
-      SKLAND_ANONYMOUS: ${{ secrets.SKLAND_ANONYMOUS }}
