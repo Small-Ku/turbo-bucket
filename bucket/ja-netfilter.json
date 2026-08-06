@@ -1,0 +1,31 @@
+{
+	"version": "2026.04.14.060203",
+	"description": "A javaagent filter for JetBrains IDEs and products.",
+	"homepage": "https://jetbrains.ankio.net/",
+	"license": "Freeware",
+	"url": "https://jetbrains.ankio.net/static/ja-netfilter.zip",
+	"hash": "0de3d675134ed4b07262db7e4b26c23e9b83ef731759fa1a7c65806b322906cb",
+	"post_install": [
+		"pushd \"$dir\\scripts\"",
+		"cscript //nologo install-current-user.vbs",
+		"popd"
+	],
+	"pre_uninstall": [
+		"pushd \"$dir\\scripts\"",
+		"cscript //nologo uninstall-current-user.vbs",
+		"popd"
+	],
+	"checkver": {
+		"script": [
+			"$res = Invoke-WebRequest -Uri 'https://jetbrains.ankio.net/static/ja-netfilter.zip' -Method Head -UseBasicParsing",
+			"$lm = $res.Headers['Last-Modified']",
+			"if (-not $lm) { $lm = $res.Headers['last-modified'] }",
+			"$dt = [DateTimeOffset]::Parse($lm).UtcDateTime",
+			"Write-Output ($dt.ToString('yyyy.MM.dd.HHmmss'))"
+		],
+		"regex": "(?<version>[\\d.]+)"
+	},
+	"autoupdate": {
+		"url": "https://jetbrains.ankio.net/static/ja-netfilter.zip"
+	}
+}
