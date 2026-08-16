@@ -1,16 +1,16 @@
 {
-	"version": "1.12.0.187",
+	"version": "1.12.0.219",
 	"description": "A graphical frontend for Legendary, the FOSS Epic Games Launcher alternative (Prerelease)",
 	"homepage": "https://github.com/RareDevs/Rare",
 	"license": "GPL-3.0",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/RareDevs/Rare/releases/download/1.12.0.187/Rare-1.12.0.187-x86_64.msi",
-			"hash": "f06d8b2ad473b943fdac2a209d5098b1ca0777d36756e5cf6292b7620feec561"
+			"url": "https://github.com/RareDevs/Rare/releases/download/1.12.0.219/Rare-1.12.0.219-x86_64.msi",
+			"hash": "930fbce3eab6c33dbc1726d4305e39b620cfdb1ec9f558d12e7d93305785b8e7"
 		},
 		"arm64": {
-			"url": "https://github.com/RareDevs/Rare/releases/download/1.12.0.187/Rare-1.12.0.187-arm64.msi",
-			"hash": "53479403842c1c4e58592c57a1e282f6697da87a1718551ee5f0c224fabf366a"
+			"url": "https://github.com/RareDevs/Rare/releases/download/1.12.0.219/Rare-1.12.0.219-arm64.msi",
+			"hash": "37a492cddef9ec00224c464c5ca4bbbdce8510dcc636cf9ed849f7e01ae9abcd"
 		}
 	},
 	"bin": "rare.exe",
