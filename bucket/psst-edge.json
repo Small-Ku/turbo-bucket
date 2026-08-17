@@ -1,5 +1,5 @@
 {
-	"version": "2026.06.30-6267ec1",
+	"version": "2026.08.17-f8c11b9",
 	"description": "Fast and multi-platform Spotify client with native GUI",
 	"homepage": "https://github.com/jpochyla/psst",
 	"license": {
@@ -7,7 +7,7 @@
 		"url": "https://github.com/jpochyla/psst/blob/master/LICENSE.md"
 	},
 	"url": "https://github.com/jpochyla/psst/releases/download/rolling/Psst.exe#/psst.exe",
-	"hash": "adad955770be47036b86ebfce862b3dca6319ccefde50de39235dbc95d8cd4d1",
+	"hash": "4633e6c1e10dab37a9abe7f7348fd3e6c359aae4ed98aaca8a7fdbcd789d503e",
 	"checkver": {
 		"script": [
 			"$rel_info = Invoke-RestMethod -Uri 'https://api.github.com/repos/jpochyla/psst/releases'",
