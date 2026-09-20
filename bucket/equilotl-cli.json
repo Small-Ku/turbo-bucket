@@ -1,13 +1,13 @@
 {
-	"version": "2.2.7",
+	"version": "2.2.9",
 	"description": "A cross platform cli app for installing Equicord.",
 	"homepage": "https://github.com/Equicord/Equilotl",
 	"license": {
 		"identifier": "GPL-3.0-only",
 		"url": "https://github.com/Equicord/Equilotl/blob/main/LICENSE"
 	},
-	"url": "https://github.com/Equicord/Equilotl/releases/download/v2.2.7/EquilotlCli.exe",
-	"hash": "2bf0de6036a53b071b643a2819bafec0eb5593649089137112bfea96fcacce28",
+	"url": "https://github.com/Equicord/Equilotl/releases/download/v2.2.9/EquilotlCli.exe",
+	"hash": "515adfffc8ee72db3e7a5a873d265e254ee68116e80af7c0c0b99bc5ee6eb4ec",
 	"checkver": "github",
 	"autoupdate": {
 		"url": "https://github.com/Equicord/Equilotl/releases/download/v$version/EquilotlCli.exe"
