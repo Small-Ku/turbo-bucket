@@ -1,16 +1,16 @@
 {
 	"homepage": "https://bitsum.com/",
 	"description": "Real-Time CPU Optimization and Automation",
-	"version": "18.4.0.43-beta+rel.29.09.2026.0739",
+	"version": "18.4.0.45-beta+rel.30.09.2026.1333",
 	"license": "Freemium",
 	"architecture": {
 		"64bit": {
 			"url": "https://dl.bitsum.com/files/beta/processlassosetup64.exe#/dl.7z",
-			"hash": "0e2eeb6e5c990a2432697505d5fa263c5a272a32db245fc8762f6d0734f637cf"
+			"hash": "31a26b5398ffd49e62824f35f061ec0e54c19b7f04110ac010a1bd6ccae4a4e2"
 		},
 		"32bit": {
 			"url": "https://dl.bitsum.com/files/beta/processlassosetup32.exe#/dl.7z",
-			"hash": "17d16fa1b7e5708196d8b2413b0e4206d9ab63ba1033a2230b320f380d261dcd"
+			"hash": "b90ad087d832c5965c04153698e3b450ba523a4eabf96c5ff6ae6d2fad72987d"
 		}
 	},
 	"extract_to": "Process Lasso",
