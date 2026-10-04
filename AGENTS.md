@@ -294,6 +294,10 @@ $env:SCOOP_HOME = (scoop prefix scoop)
 
 ## Committing Changes
 
+### Automated feed versus engineering changes
+
+Keep automated manifest/version feed work separate from human engineering changes. Validated mechanical bot updates may use direct validated linear updates only when the repository's current bot and branch policy explicitly allows it. Human changes to schema, shared helpers, CI, or complex install logic use a PR. Once that engineering direction is technically feasible and useful, open the first PR and finish validation, cleanup, and review there; PR-ready is not implementation-complete. Review may add corrective commits, and the accepted tree is what gets squashed into canonical main history.
+
 ### Single Manifest Commit Format
 
 When committing a single manifest change (add or update), use this format:
