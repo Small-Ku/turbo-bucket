@@ -4,11 +4,11 @@ This document provides context for AI agents working with the Turbo Bucket repos
 
 ## Overview
 
-**Turbo Bucket** is a [Scoop](https://scoop.sh) bucket for Windows package management. It contains applications that the maintainer uses personally.
+Turbo Bucket is a [Scoop](https://scoop.sh) bucket for Windows package management. It contains applications that the maintainer uses personally.
 
-- **Repository**: https://github.com/Small-Ku/turbo-bucket
-- **Installation**: `scoop bucket add turbo 'https://github.com/Small-Ku/turbo-bucket.git'`
-- **Usage**: `scoop install turbo/<app_name>`
+- Repository: https://github.com/Small-Ku/turbo-bucket
+- Installation: `scoop bucket add turbo 'https://github.com/Small-Ku/turbo-bucket.git'`
+- Usage: `scoop install turbo/<app_name>`
 
 ## Bucket Structure
 
@@ -156,7 +156,7 @@ Each asset in the response includes:
 - `browser_download_url`: Direct download link
 - `digest`: SHA256 hash in format `sha256:<hash>`
 
-**Example from MaaEnd release:**
+Example from MaaEnd release:
 ```json
 {
   "name": "MaaEnd-win-x86_64-v2.3.0.zip",
@@ -180,25 +180,28 @@ Get-FileHash -Path "file.zip" -Algorithm SHA256
 
 ### 4. Getting extract_dir
 
-Use `scripts/Get-ArchivePath.ps1` to analyze a ZIP file **without downloading the entire file**. It parses the ZIP local file headers to list all files and determine if `extract_dir` is needed.
+Use `scripts/Get-ArchivePath.ps1` to analyze a ZIP file without downloading the entire file.
+It parses ZIP local file headers, lists the files, and determines whether `extract_dir` is needed.
 
 ```powershell
 # Run the script with a download URL
 .\scripts\Get-ArchivePath.ps1 -Url "https://github.com/user/repo/releases/download/v1.0.0/App-win-x86_64-v1.0.0.zip"
 ```
 
-**Output includes:**
+Output includes:
 - List of files at root level
 - List of directories
 - Recommendation: `extract_dir: "dirname"` or `NOT NEEDED`
 - Whether autoupdate is needed for extract_dir
 
-**Logic:**
+Logic:
 - Files at root → no `extract_dir` needed
 - Single top-level directory → `extract_dir` is that directory
 - Multiple directories → no `extract_dir` needed (Scoop uses version-named folder)
 
-**autoupdate.extract_dir:** Only needed if the path contains variables like `$version`. If the path is static (e.g., `"agent"`), it stays in the base manifest and doesn't need to be in autoupdate.
+autoupdate.extract_dir:
+- Add it only when the path contains variables such as `$version`.
+- If the path is static, such as `"agent"`, keep it in the base manifest.
 
 ### 5. Checkver Configuration
 
@@ -268,12 +271,12 @@ Do not:
 
 When a Pull Request is opened, two checks run automatically:
 
-1. **Pull Request Validator** (`ScoopInstaller/GithubActions`)
+1. Pull Request Validator (`ScoopInstaller/GithubActions`)
    - Validates manifest JSON structure
    - Checks required fields
    - Verifies URLs are accessible
 
-2. **Biome Format**
+2. Biome Format
    - Ensures consistent JSON formatting
    - Uses tab indentation, CRLF line endings
 
@@ -294,6 +297,16 @@ $env:SCOOP_HOME = (scoop prefix scoop)
 
 ## Committing Changes
 
+### Automated feed versus engineering changes
+
+Keep automated manifest/version feed work separate from human engineering changes.
+Validated mechanical bot updates may use direct validated linear updates only when the current bot and branch policy explicitly allows them.
+Use a PR for human changes to schema, shared helpers, CI, or complex install logic.
+Open the first correct authority PR when evidence shows that the direction is technically feasible, materially useful, and has no known blocker likely to overturn it.
+Continue validation, cleanup, and review on that PR.
+PR-ready does not mean implementation-complete or accepted.
+Treat PR commits as review and evidence carriers. Prefer additive corrective commits. The maintainer accepts the final tree and squashes it into canonical `main` history.
+
 ### Single Manifest Commit Format
 
 When committing a single manifest change (add or update), use this format:
@@ -308,7 +321,7 @@ git add bucket/<app-name>.json
 git commit -m "update(<app-name>): <version>"
 ```
 
-**Examples:**
+Examples:
 - `add(maaend): 2.3.0` - Adding new app maaend version 2.3.0
 - `update(letta-code): 0.21.1` - Updating letta-code to version 0.21.1
 - `add(imageglass-beta): 10.0.0.314-beta-1` - Adding new app with beta version
@@ -326,10 +339,10 @@ git commit -m "update(<app-name>): <version>"
 ### Formatting (Biome)
 
 The bucket uses [Biome](https://biomejs.dev/) for JSON formatting:
-- **Indent Style**: Tab
-- **Indent Width**: 2
-- **Line Ending**: CRLF
-- **Trailing Newline**: true
+- Indent Style: Tab
+- Indent Width: 2
+- Line Ending: CRLF
+- Trailing Newline: true
 
 Run Biome to format:
 ```powershell
