@@ -1,16 +1,16 @@
 {
-	"version": "0.9.0",
+	"version": "0.9.1",
 	"description": "Universal MCP to LSP bridge - expose Language Server Protocol capabilities as MCP tools for AI agents",
 	"homepage": "https://github.com/bug-ops/mcpls",
 	"license": "MIT",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/bug-ops/mcpls/releases/download/v0.9.0/mcpls-x86_64-pc-windows-msvc.zip",
-			"hash": "759594dbfd2c9ea22ae7f8268ca485468caeea2a7b3f6bdde03e5953ee64eab8"
+			"url": "https://github.com/bug-ops/mcpls/releases/download/v0.9.1/mcpls-x86_64-pc-windows-msvc.zip",
+			"hash": "6da08ee00d0c9b3650f0c8bd2b47cfac4ac455203b7cd3599422c4f6839c0d0c"
 		},
 		"arm64": {
-			"url": "https://github.com/bug-ops/mcpls/releases/download/v0.9.0/mcpls-aarch64-pc-windows-msvc.zip",
-			"hash": "bc1acebd55e263863460bfd83e627679256edcd952dadd4f633b4b24147bab8d"
+			"url": "https://github.com/bug-ops/mcpls/releases/download/v0.9.1/mcpls-aarch64-pc-windows-msvc.zip",
+			"hash": "1cc6568435e2576c7aba4c9d8c2335fe65e18a990ce6765c4cbd22a408fad576"
 		}
 	},
 	"bin": "mcpls.exe",
