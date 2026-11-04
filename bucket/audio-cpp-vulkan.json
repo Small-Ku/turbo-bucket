@@ -1,0 +1,22 @@
+{
+	"version": "0.9.3",
+	"description": "Pure C++ audio inference engine with Vulkan and CPU backends.",
+	"homepage": "https://github.com/0xShug0/audio.cpp",
+	"license": "Apache-2.0",
+	"architecture": {
+		"64bit": {
+			"url": "https://github.com/0xShug0/audio.cpp/releases/download/v0.9.3/audio-v0.9.3-bin-windows-x64-vulkan-portable.zip",
+			"hash": "51f8d8ce6cc7789bc9dc3d15f35e05f143aaf2ce1cbecc525a4104bcdde82a42"
+		}
+	},
+	"bin": ["audiocpp_cli.exe", "audiocpp_server.exe", "audiocpp_gguf.exe"],
+	"notes": "A compatible Vulkan 1.1+ GPU driver is required for Vulkan inference. Model files must be downloaded separately.",
+	"checkver": "github",
+	"autoupdate": {
+		"architecture": {
+			"64bit": {
+				"url": "https://github.com/0xShug0/audio.cpp/releases/download/v$version/audio-v$version-bin-windows-x64-vulkan-portable.zip"
+			}
+		}
+	}
+}
