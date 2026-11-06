@@ -1,0 +1,31 @@
+{
+	"version": "0.9.3",
+	"description": "Pure C++ audio inference engine with CUDA 13.3 and CPU backends.",
+	"homepage": "https://github.com/0xShug0/audio.cpp",
+	"license": "Apache-2.0",
+	"architecture": {
+		"64bit": {
+			"url": [
+				"https://github.com/0xShug0/audio.cpp/releases/download/v0.9.3/audio-v0.9.3-bin-windows-x64-cuda13.3.zip",
+				"https://github.com/0xShug0/audio.cpp/releases/download/v0.9.3/audio-v0.9.3-cudart-windows-x64-cuda13.3.zip"
+			],
+			"hash": [
+				"0bd3988be10c31ec078c40df2bd0d4266e660804f6d5083aeb05d1309d091e43",
+				"839eb20f684a8aab64895b1e466b32ce9b29dfc19dc1ce15b2ef35218512ac0a"
+			]
+		}
+	},
+	"bin": ["audiocpp_cli.exe", "audiocpp_server.exe", "audiocpp_gguf.exe"],
+	"notes": "CUDA inference requires a compatible NVIDIA GPU and driver. The matching CUDA runtime DLLs are included; model files must be downloaded separately.",
+	"checkver": "github",
+	"autoupdate": {
+		"architecture": {
+			"64bit": {
+				"url": [
+					"https://github.com/0xShug0/audio.cpp/releases/download/v$version/audio-v$version-bin-windows-x64-cuda13.3.zip",
+					"https://github.com/0xShug0/audio.cpp/releases/download/v$version/audio-v$version-cudart-windows-x64-cuda13.3.zip"
+				]
+			}
+		}
+	}
+}
