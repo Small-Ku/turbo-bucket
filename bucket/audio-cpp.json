@@ -1,0 +1,22 @@
+{
+	"version": "0.9.3",
+	"description": "Pure C++ audio inference engine (portable CPU build) for TTS, ASR, and audio generation.",
+	"homepage": "https://github.com/0xShug0/audio.cpp",
+	"license": "Apache-2.0",
+	"architecture": {
+		"64bit": {
+			"url": "https://github.com/0xShug0/audio.cpp/releases/download/v0.9.3/audio-v0.9.3-bin-windows-x64-cpu-portable.zip",
+			"hash": "f5fa4662b7ec323dbe31d37e224e46159b064836a9005da384551a5248771eeb"
+		}
+	},
+	"bin": ["audiocpp_cli.exe", "audiocpp_server.exe", "audiocpp_gguf.exe"],
+	"notes": "Model files must be downloaded separately.",
+	"checkver": "github",
+	"autoupdate": {
+		"architecture": {
+			"64bit": {
+				"url": "https://github.com/0xShug0/audio.cpp/releases/download/v$version/audio-v$version-bin-windows-x64-cpu-portable.zip"
+			}
+		}
+	}
+}
