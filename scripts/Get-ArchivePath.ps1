@@ -2,8 +2,8 @@
 # Lists all files in a ZIP archive to help determine extract_dir and shortcuts.
 
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$Url
+	[Parameter(Mandatory = $true)]
+	[string]$Url
 )
 
 # Get total length for EOCD search
