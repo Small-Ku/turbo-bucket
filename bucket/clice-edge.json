@@ -1,10 +1,10 @@
 {
-	"version": "0.1.2026102301",
+	"version": "0.1.2026102407",
 	"description": "A fast C/C++ language server (latest prerelease)",
 	"homepage": "https://github.com/clice-io/clice",
 	"license": "Apache-2.0",
-	"url": "https://github.com/clice-io/clice/releases/download/v0.1.2026102301/clice-0.1.2026102301.x86_64-w64-mingw32.zip",
-	"hash": "4204d1f32764da37d5ec39263546b5b05d8f73446a577abda2ab2c24784607c4",
+	"url": "https://github.com/clice-io/clice/releases/download/v0.1.2026102407/clice-0.1.2026102407.x86_64-w64-mingw32.zip",
+	"hash": "88066705d4eeb4f11c4c7376a3aefde3f03b0d7fd842efca8af61b484e97b701",
 	"bin": [["clice\\bin\\clice.exe", "clice"]],
 	"checkver": {
 		"url": "https://api.github.com/repos/clice-io/clice/releases",
